@@ -23,7 +23,7 @@ public interface OsLibraryPathResolver {
         }
         File p = Path.of(path).toFile();
         if(!p.exists() || !p.canRead()) {
-            throw new IllegalArgumentException("invalid path or not accessible");
+            throw new IllegalArgumentException("invalid path or not accessible:  " + p.getAbsolutePath());
         }
 
         File libFile = Paths.get(path, file).toFile();

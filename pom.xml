@@ -23,6 +23,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+
+        <google.gson.version>2.10.1</google.gson.version>
+        <google.guava.version>33.1.0-android</google.guava.version>
     </properties>
 
     <licenses>
@@ -55,6 +58,19 @@
     </distributionManagement>
 
     <dependencies>
+        <!-- COMPILE -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${google.gson.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${google.guava.version}</version>
+        </dependency>
 
         <!-- TEST -->
         <dependency>
@@ -73,6 +89,12 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>4.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version> <!-- Make sure to use the latest version available -->
             <scope>test</scope>
         </dependency>
     </dependencies>
