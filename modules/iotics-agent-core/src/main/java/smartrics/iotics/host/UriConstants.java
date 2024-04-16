@@ -1,13 +1,8 @@
 package smartrics.iotics.host;
 
 public interface UriConstants {
-
-    String IOTICS_APP_MODEL_PROP = "https://data.iotics.com/app#model";
-    String IOTICS_APP_DEFINES_PROP = "https://data.iotics.com/app#defines";
-    String IOTICS_APP_COLOR_PROP = "https://data.iotics.com/app#color";
     String IOTICS_PUBLIC_ALLOW_LIST_PROP = "http://data.iotics.com/public#hostAllowList";
     String IOTICS_PUBLIC_ALLOW_ALL_VALUE = "http://data.iotics.com/public#allHosts";
-    String IOTICS_APP_MODEL_VALUE = "https://data.iotics.com/app#Model";
 
     String ON_RDFS = "http://www.w3.org/2000/01/rdf-schema#";
     String ON_RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";

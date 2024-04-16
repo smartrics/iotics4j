@@ -34,9 +34,6 @@ public class IoticsApi {
                 .withUserKeyID(userConf.keyId())
                 .withAgentKeyName(agentConf.keyName())
                 .withUserKeyName(userConf.keyName())
-                .withResolverAddress(ioticSpace.endpoints().resolver())
-                .withUserSeed(userConf.seed())
-                .withAgentSeed(agentConf.seed())
                 .build();
         timer = new Timer("token-scheduler");
 

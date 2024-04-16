@@ -1,8 +1,5 @@
 package smartrics.iotics.identity.resolver;
 
-import smartrics.iotics.identity.resolver.HttpResolverClient;
-import smartrics.iotics.identity.resolver.ResolverClient;
-
 import java.net.URI;
 
 public class HttpResolverClientApp {

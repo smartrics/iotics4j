@@ -9,6 +9,7 @@ import smartrics.iotics.host.grpc.token.TokenTimerSchedulerBuilder;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Timer;
 
 public class HostManagedChannelBuilderFactory {
@@ -59,11 +60,7 @@ public class HostManagedChannelBuilderFactory {
         List<ClientInterceptor> interceptorList = new ArrayList<>();
         interceptorList.add(tokenInjectorClientInterceptor);
         builder.intercept(interceptorList);
-        if (userAgent == null) {
-            builder.userAgent("UserAgent=" + sim.agentIdentity().did());
-        } else {
-            builder.userAgent(userAgent);
-        }
+        builder.userAgent(Objects.requireNonNullElseGet(userAgent, () -> "UserAgent=" + sim.agentIdentity().did()));
         return builder;
     }
 

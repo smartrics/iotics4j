@@ -5,12 +5,7 @@ import smartrics.iotics.host.grpc.token.TokenScheduler;
 
 import static io.grpc.Metadata.ASCII_STRING_MARSHALLER;
 
-public record TokenInjectorClientInterceptor(
-        TokenScheduler scheduler) implements ClientInterceptor {
-
-    public TokenInjectorClientInterceptor(TokenScheduler scheduler) {
-        this.scheduler = scheduler;
-    }
+public record TokenInjectorClientInterceptor(TokenScheduler scheduler) implements ClientInterceptor {
 
     public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(MethodDescriptor<ReqT, RespT> method, CallOptions callOptions, Channel next) {
         return new HeaderAttachingClientCall<>(next.newCall(method, callOptions));

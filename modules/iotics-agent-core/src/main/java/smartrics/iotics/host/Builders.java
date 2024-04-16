@@ -8,10 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Builders {
 
     public static Headers.Builder newHeadersBuilder(String did) {
-        Headers.Builder hBld = Headers.newBuilder()
+        return Headers.newBuilder()
                 .addTransactionRef("txRef-" + sUUID())
                 .setClientAppId(did);
-        return hBld;
     }
 
     public static String sUUID() {

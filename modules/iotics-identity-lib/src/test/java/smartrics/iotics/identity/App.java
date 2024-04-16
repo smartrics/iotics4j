@@ -5,7 +5,6 @@ import smartrics.iotics.identity.jna.JnaSdkApiInitialiser;
 import smartrics.iotics.identity.jna.OsLibraryPathResolver;
 import smartrics.iotics.identity.jna.SdkApi;
 
-import java.nio.file.Paths;
 import java.time.Duration;
 
 public class App {
