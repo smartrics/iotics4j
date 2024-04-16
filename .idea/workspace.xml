@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +34,12 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/fab_c/work/github/smartrics/iotics4j/modules/iotics-agent-core"
+    "last_opened_file_path": "C:/Users/fab_c/work/github/smartrics/iotics4j/modules/iotics-agent-core/src/main/proto"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-agent-core\src\main\proto" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-agent-core" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j" />
     </key>
