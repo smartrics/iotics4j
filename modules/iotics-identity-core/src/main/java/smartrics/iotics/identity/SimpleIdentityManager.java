@@ -1,6 +1,5 @@
 package smartrics.iotics.identity;
 
-
 import java.time.Duration;
 
 /**
@@ -50,14 +49,11 @@ public class SimpleIdentityManager implements IdentityManager {
     }
 
     public static final class Builder {
-        private String userSeed;
-        private String agentSeed;
         private String userKeyName;
         private String agentKeyName;
         private String userKeyID;
         private String agentKeyID;
         private String authDelegationID;
-        private String resolverAddress;
         private SimpleIdentityImpl simpleIdentity;
 
         private Builder() {
@@ -68,16 +64,6 @@ public class SimpleIdentityManager implements IdentityManager {
 
         public static Builder anIdentityManager() {
             return new Builder();
-        }
-
-        public Builder withUserSeed(String userSeed) {
-            this.userSeed = userSeed;
-            return this;
-        }
-
-        public Builder withAgentSeed(String agentSeed) {
-            this.agentSeed = agentSeed;
-            return this;
         }
 
         public Builder withUserKeyName(String userKeyName) {
@@ -97,11 +83,6 @@ public class SimpleIdentityManager implements IdentityManager {
 
         public Builder withAgentKeyID(String agentKeyID) {
             this.agentKeyID = agentKeyID;
-            return this;
-        }
-
-        public Builder withResolverAddress(String resolverAddress) {
-            this.resolverAddress = resolverAddress;
             return this;
         }
 
