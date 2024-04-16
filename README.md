@@ -4,6 +4,19 @@ A multimodule Java implementation of client libraries for IOTICSpace
 
 ## Build
 
-* Clone this repository
-* to pull the latest API from IOTICS: `git pull --recurse-submodules`
+## Update to latest version
+
+After this repository has been locally cloned pull the latest API from IOTICS: 
+
+`git pull --recurse-submodules`
+
+## Protobuffers and gRPC services in iotics-agent-core
+
+Once the protobuf files have been checked out and added as git submodule in `modules/iotics-agent-core/iotics-api` 
+they should be symlinked from `src/main/proto`.
+If symlink isn't restored, cd into `modules/iotics-agent-core` and run:
+- mkdir `src\main\proto`
+- On Windows: `mklink /J src\main\proto\iotics iotics-api\proto\iotics`
+- On Linux `ln -s src/main/proto/iotics iotics-api/proto/iotics`
+
 * `mvn package`

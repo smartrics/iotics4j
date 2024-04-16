@@ -1,4 +1,6 @@
 modules/iotics-agent-core/iotics-api/*
+modules/iotics-agent-core/src/main/proto
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
