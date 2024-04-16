@@ -1,0 +1,3 @@
+[submodule "modules/iotics-agent-core/iotics-api"]
+	path = modules/iotics-agent-core/iotics-api
+	url = https://github.com/Iotic-Labs/api

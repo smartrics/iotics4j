@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lib-iotics-id-sdk.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lib-iotics-id-sdk.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/src/main/java/smartrics/iotics/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/iotics-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/.gitmodules" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2fBHDPVCIOz8Z823ywSFoz7cHxQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,6 +47,7 @@
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules" />
     </key>
   </component>
