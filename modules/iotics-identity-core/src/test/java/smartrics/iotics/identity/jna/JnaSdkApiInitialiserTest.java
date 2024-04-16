@@ -7,7 +7,7 @@ import org.junit.jupiter.api.condition.OS;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class JnaSdkApiInitialiserTest {
+public class JnaSdkApiInitialiserTest {
 
     static {
 

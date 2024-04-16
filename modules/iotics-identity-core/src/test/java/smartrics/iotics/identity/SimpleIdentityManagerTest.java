@@ -1,4 +1,5 @@
 package smartrics.iotics.identity;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,8 +8,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.Duration;
-import static org.mockito.Mockito.*;
+
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class SimpleIdentityManagerTest {
@@ -25,8 +27,8 @@ class SimpleIdentityManagerTest {
     private final String agentKeyID = "agentKeyID";
     private final String authDelegationID = "authDelegationID";
 
-    private Identity userIdentity = new Identity("userKey", "user", "did:iotics:user");
-    private Identity agentIdentity = new Identity("agentKey", "agent", "did:iotics:agent");
+    private final Identity userIdentity = new Identity("userKey", "user", "did:iotics:user");
+    private final Identity agentIdentity = new Identity("agentKey", "agent", "did:iotics:agent");
 
     @BeforeEach
     void setUp() {

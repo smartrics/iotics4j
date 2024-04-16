@@ -9,8 +9,7 @@ import com.sun.jna.Native;
 public class JnaSdkApiInitialiser implements SdkApiInitialiser {
     public static String pathPropertyName = "ioticsIdentityLibraryFile";
 
-    private SdkApi idProxy;
-
+    private final SdkApi idProxy;
 
     public JnaSdkApiInitialiser(String path, OsLibraryPathResolver resolver) {
         this.idProxy = load(path, resolver);

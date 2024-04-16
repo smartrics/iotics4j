@@ -21,12 +21,8 @@ public class SimpleIdentityImplTest {
 
     @Test
     void validApiConstruction() {
-        assertThrows(NullPointerException.class, () -> {
-            new SimpleIdentityImpl(null, "");
-        });
-        assertThrows(IllegalArgumentException.class, () -> {
-            new SimpleIdentityImpl(sdkApi, "invalid url", "some seed");
-        });
+        assertThrows(NullPointerException.class, () -> new SimpleIdentityImpl(null, ""));
+        assertThrows(IllegalArgumentException.class, () -> new SimpleIdentityImpl(sdkApi, "invalid url", "some seed"));
     }
 
     @Test
@@ -151,9 +147,7 @@ public class SimpleIdentityImplTest {
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, validUrl(), "some seed");
         when(sdkApi.CreateUserIdentity(any(), any(), any(), any())).thenReturn(errorResult("some error"));
 
-        assertThrows(SimpleIdentityException.class, () -> {
-            si.CreateUserIdentity("userKeyName", "userName");
-        });
+        assertThrows(SimpleIdentityException.class, () -> si.CreateUserIdentity("userKeyName", "userName"));
     }
 
     @Test
@@ -167,7 +161,7 @@ public class SimpleIdentityImplTest {
         String token = si.CreateAgentAuthToken(i, "did:iotics:user", "aud", Duration.ofSeconds(123));
 
         assertEquals(token, "some token");
-        verify(sdkApi).CreateAgentAuthToken(i.did(), i.keyName(), i.name(), si.getAgentSeed(), "did:iotics:user", "aud", Integer.valueOf(123));
+        verify(sdkApi).CreateAgentAuthToken(i.did(), i.keyName(), i.name(), si.getAgentSeed(), "did:iotics:user", "aud", 123);
     }
 
     @Test
@@ -181,7 +175,7 @@ public class SimpleIdentityImplTest {
         String token = si.CreateAgentAuthToken(i, "did:iotics:user", Duration.ofSeconds(123));
 
         assertEquals(token, "some token");
-        verify(sdkApi).CreateAgentAuthToken(i.did(), i.keyName(), i.name(), si.getAgentSeed(), "did:iotics:user", res, Integer.valueOf(123));
+        verify(sdkApi).CreateAgentAuthToken(i.did(), i.keyName(), i.name(), si.getAgentSeed(), "did:iotics:user", res, 123);
     }
 
     @Test
