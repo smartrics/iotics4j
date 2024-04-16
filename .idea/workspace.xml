@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/lib-iotics-id-sdk.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/lib-iotics-id-sdk.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/src/main/java/smartrics/iotics/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2fBHDPVCIOz8Z823ywSFoz7cHxQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/fab_c/work/github/smartrics/iotics4j/modules/iotics-agent-core"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-agent-core" />
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="" />
+      <created>1713267431477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713267431477</updated>
+    </task>
+    <servers />
+  </component>
+</project>
