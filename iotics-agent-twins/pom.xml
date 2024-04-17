@@ -10,7 +10,7 @@
     <artifactId>iotics-agent-twins</artifactId>
     <packaging>jar</packaging>
 
-    <name>iotics-agent-twins</name>
+    <name>${project.groupId}:${project.artifactId}</name>
     <url>http://maven.apache.org</url>
 
     <properties>

@@ -12,9 +12,9 @@ After this repository has been locally cloned pull the latest API from IOTICS:
 
 ## Protobuffers and gRPC services in iotics-agent-core
 
-Once the protobuf files have been checked out and added as git submodule in `modules/iotics-agent-core/iotics-api` 
+Once the protobuf files have been checked out and added as git submodule in `iotics-agent-core/iotics-api` 
 they should be symlinked from `src/main/proto`.
-If symlink isn't restored, cd into `modules/iotics-agent-core` and run:
+If symlink isn't restored, cd into `./iotics-agent-core` and run:
 - mkdir `src\main\proto`
 - On Windows: `mklink /J src\main\proto\iotics iotics-api\proto\iotics`
 - On Linux `ln -s src/main/proto/iotics iotics-api/proto/iotics`

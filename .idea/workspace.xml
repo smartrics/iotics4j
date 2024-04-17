@@ -4,23 +4,96 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added missing test">
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="cleaned up code">
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/.github/dependabot.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/.github/workflows/ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/buf.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/buf.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/common.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/feed.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/host.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/input.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/interest.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/meta.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/search.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/iotics-api/proto/iotics/api/twin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/TokenInjectorClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/TokenInjectorClientInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-twins/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-agent-twins/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/go/StringResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/go/StringResultTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/OsLibraryPathResolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/OsLibraryPathResolverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/experimental/JWTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/experimental/JWTTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/resolver/HttpResolverClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/resolver/HttpResolverClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/iotics-api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticSpace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/ServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractMappingStreamObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractMappingStreamObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/ListenableFutureAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/ListenableFutureAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/NoopStreamObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/NoopStreamObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/TokenInjectorClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/TokenInjectorClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/api/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/api/annotations.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/api/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/api/http.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/protobuf/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/protobuf/descriptor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/protobuf/descriptor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/protobuf/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/protobuf/timestamp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/protobuf/wrappers.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/protobuf/wrappers.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-core/src/main/proto/google/rpc/status.proto" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/proto/google/rpc/status.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-twins/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-twins/src/main/java/smartrics/iotics/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-agent-twins/src/test/java/smartrics/iotics/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/Identity.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Identity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/IdentityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/IdentityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentity.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/go/StringResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/go/StringResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/OsLibraryPathResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/OsLibraryPathResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/SdkApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/SdkApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/SdkApiInitialiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/SdkApiInitialiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/DataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/DataFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/IdentityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/IdentityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/go/StringResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/go/StringResultTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/JnaSdkApiInitialiserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/OsLibraryPathResolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/jna/OsLibraryPathResolverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/resources/simpleConfig_noId.json" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/resources/simpleConfig_noId.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/resources/simpleConfig_noSeed.json" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/resources/simpleConfig_noSeed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-core/src/test/resources/simpleConfig_withId.json" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/resources/simpleConfig_withId.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/identity/Seeds.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/Seeds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/identity/experimental/JWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/experimental/JWT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/DocumentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/DocumentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/HttpResolverClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/HttpResolverClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/Resolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/Resolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/ResolverClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/ResolverClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/test/java/smartrics/iotics/identity/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/experimental/JWTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/test/java/smartrics/iotics/identity/experimental/JWTTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/resolver/HttpResolverClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/test/java/smartrics/iotics/identity/resolver/HttpResolverClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/iotics-identity-lib/src/test/java/smartrics/iotics/identity/resolver/HttpResolverClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/test/java/smartrics/iotics/identity/resolver/HttpResolverClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +115,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2fBHDPVCIOz8Z823ywSFoz7cHxQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -63,10 +140,21 @@
     "JUnit.OsLibraryPathResolverTest.testLibraryPathLinux.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken.executor": "Debug",
+    "JUnit.TokenTimerSchedulerTest.executor": "Run",
+    "JUnit.java in iotics-identity-core (1).executor": "Run",
     "JUnit.java in iotics-identity-core.executor": "Coverage",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.iotics-agent-core [clean].executor": "Run",
+    "Maven.iotics-agent-core [compile].executor": "Run",
     "Maven.iotics-agent-core [package].executor": "Run",
+    "Maven.iotics-agent-core [validate].executor": "Run",
+    "Maven.iotics-identity-core [compile].executor": "Run",
     "Maven.iotics-identity-core [package].executor": "Run",
+    "Maven.iotics-identity-lib [compile].executor": "Run",
+    "Maven.iotics-identity-lib [package].executor": "Run",
+    "Maven.iotics4j [compile].executor": "Run",
+    "Maven.iotics4j [package].executor": "Run",
+    "Maven.iotics4j [validate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -78,7 +166,8 @@
     "last_opened_file_path": "C:/Users/fab_c/work/github/smartrics/iotics4j/modules/iotics-agent-core/src/main/java/smartrics/iotics/host",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3045977"
+    "project.structure.side.proportion": "0.3045977",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -90,8 +179,8 @@
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-core\src\main\java\smartrics\iotics\identity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-lib\src" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j" />
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-lib\src" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -105,6 +194,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="smartrics.iotics.host.grpc.token" />
       <recent name="smartrics.iotics.identity.resolver" />
       <recent name="smartrics.iotics.identity.experimental" />
       <recent name="smartrics.iotics.identity" />
@@ -116,36 +206,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in iotics-identity-core">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.App" />
-      <module name="iotics-identity-lib" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.identity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JWTTest.parsesValidTokens" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-identity-lib" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.identity.resolver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.identity.experimental" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.experimental.JWTTest" />
-      <option name="METHOD_NAME" value="parsesValidTokens" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.java in iotics-identity-core (1)">
     <configuration name="SimpleIdentityManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-identity-core" />
       <extension name="coverage">
@@ -177,6 +238,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TokenTimerSchedulerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.host.grpc.token.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc.token" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.token.TokenTimerSchedulerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in iotics-identity-core (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-identity-core" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/iotics-identity-core/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="java in iotics-identity-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-identity-core" />
       <option name="TEST_OBJECT" value="directory" />
@@ -187,11 +271,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in iotics-identity-core (1)" />
+        <item itemvalue="JUnit.TokenTimerSchedulerTest" />
         <item itemvalue="JUnit.java in iotics-identity-core" />
         <item itemvalue="JUnit.SimpleIdentityManagerTest" />
         <item itemvalue="JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken" />
-        <item itemvalue="JUnit.JWTTest.parsesValidTokens" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +335,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713298659127</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cleaned up code">
+      <option name="closed" value="true" />
+      <created>1713299082217</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713299082217</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cleaned up code">
+      <option name="closed" value="true" />
+      <created>1713299089871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713299089871</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -264,18 +364,19 @@
     <MESSAGE value="added higher level tools in identity lib" />
     <MESSAGE value="moved code from iotics-agent-java" />
     <MESSAGE value="added missing test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added missing test" />
+    <MESSAGE value="cleaned up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java</url>
+          <url>file://$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java</url>
           <line>54</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/modules/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java</url>
+          <url>file://$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java</url>
           <line>96</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
