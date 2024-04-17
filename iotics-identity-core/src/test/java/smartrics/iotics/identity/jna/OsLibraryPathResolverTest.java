@@ -22,7 +22,7 @@ public class OsLibraryPathResolverTest {
     public void testLibraryPathLinux() {
         OsLibraryPathResolver resolver = new OsLibraryPathResolver() {
         };
-        String path = resolver.resolveLibraryPath("../../lib");
+        String path = resolver.resolveLibraryPath("../lib");
         assertThat(path, containsString(".so"));
     }
 
@@ -31,7 +31,7 @@ public class OsLibraryPathResolverTest {
     public void testLibraryPathMac() {
         OsLibraryPathResolver resolver = new OsLibraryPathResolver() {
         };
-        String path = resolver.resolveLibraryPath("../../lib");
+        String path = resolver.resolveLibraryPath("../lib");
         assertThat(path, containsString(".dylib"));
     }
 

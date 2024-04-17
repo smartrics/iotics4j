@@ -20,13 +20,13 @@ public class SimpleIdentityImplTest {
     SdkApi sdkApi;
 
     @Test
-    void validApiConstruction() {
+    public void validApiConstruction() {
         assertThrows(NullPointerException.class, () -> new SimpleIdentityImpl(null, ""));
         assertThrows(IllegalArgumentException.class, () -> new SimpleIdentityImpl(sdkApi, "invalid url", "some seed"));
     }
 
     @Test
-    void whenConstructedWithoutSeed_thenGeneratesNewOne() {
+    public void whenConstructedWithoutSeed_thenGeneratesNewOne() {
         when(sdkApi.CreateDefaultSeed()).thenReturn(validResult("some seed"));
         new SimpleIdentityImpl(sdkApi, validUrl());
 
@@ -34,7 +34,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenConstructedWithOneSeed_thenUsesItForBothAgentAndUser() {
+    public void whenConstructedWithOneSeed_thenUsesItForBothAgentAndUser() {
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, validUrl(), "some seed");
 
         assertEquals("some seed", si.getAgentSeed());
@@ -44,7 +44,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenConstructedWithTwoSeed_thenUsesOneForUserAndOneForAgent() {
+    public void whenConstructedWithTwoSeed_thenUsesOneForUserAndOneForAgent() {
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, validUrl(), "user seed", "agent seed");
 
         assertEquals("agent seed", si.getAgentSeed());
@@ -54,7 +54,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenCreateTwinDidWithControlDelegation_thenMapsParametersAndDelegatesToApi() {
+    public void whenCreateTwinDidWithControlDelegation_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -70,7 +70,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenRecreateAgentIdentity_thenMapsParametersAndDelegatesToApi() {
+    public void whenRecreateAgentIdentity_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -85,7 +85,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenCreateAgentIdentity_thenMapsParametersAndDelegatesToApi() {
+    public void whenCreateAgentIdentity_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -100,7 +100,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenIsAllowedFor_thenDelegatesToApi() {
+    public void whenIsAllowedFor_thenDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -113,7 +113,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenRecreateUserIdentity_thenMapsParametersAndDelegatesToApi() {
+    public void whenRecreateUserIdentity_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -128,7 +128,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenCreateUserIdentity_thenMapsParametersAndDelegatesToApi() {
+    public void whenCreateUserIdentity_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -143,7 +143,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenCreateUserIdentityFails_thenThrows() {
+    public void whenCreateUserIdentityFails_thenThrows() {
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, validUrl(), "some seed");
         when(sdkApi.CreateUserIdentity(any(), any(), any(), any())).thenReturn(errorResult("some error"));
 
@@ -151,7 +151,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenCreateAgentAuthToken_thenMapsParametersAndDelegatesToApi() {
+    public void whenCreateAgentAuthToken_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -165,7 +165,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenCreateAgentAuthToken_thenMapsParametersAndDelegatesToApiWithDefaultAudience() {
+    public void whenCreateAgentAuthToken_thenMapsParametersAndDelegatesToApiWithDefaultAudience() {
         String res = validUrl();
 
         SimpleIdentityImpl si = new SimpleIdentityImpl(sdkApi, res, "some seed");
@@ -179,7 +179,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenUserDelegatesAuthenticationToAgent_thenMapsParametersAndDelegatesToApi() {
+    public void whenUserDelegatesAuthenticationToAgent_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
         String as = "agentSeed";
         String us = "userSeed";
@@ -196,7 +196,7 @@ public class SimpleIdentityImplTest {
     }
 
     @Test
-    void whenTwinDelegatesControlToAgent_thenMapsParametersAndDelegatesToApi() {
+    public void whenTwinDelegatesControlToAgent_thenMapsParametersAndDelegatesToApi() {
         String res = validUrl();
         String as = "agentSeed";
         String us = "userSeed";
