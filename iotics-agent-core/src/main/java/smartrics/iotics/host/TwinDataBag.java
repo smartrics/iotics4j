@@ -4,7 +4,9 @@ import com.iotics.api.*;
 
 import java.util.List;
 
-public record TwinDataBag(List<Property> properties, TwinID twinID, int feedsCount, int inputsCount,
+public record TwinDataBag(List<Property> properties,
+                          TwinID twinID,
+                          int feedsCount, int inputsCount,
                           GeoLocation location) {
 
     public static TwinDataBag from(SearchResponse.TwinDetails twinDetails) {

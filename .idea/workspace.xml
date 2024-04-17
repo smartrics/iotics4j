@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="cleaned up code">
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/AbstractMappingStreamObserverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnectionImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/BuildersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/DataFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/HttpServiceRegistryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/IoticsApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/HostConnectionImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/TokenInjectorClientInterceptorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,21 +62,32 @@
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.App.executor": "Run",
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
-    "JUnit.AbstractMappingStreamObserverTest.executor": "Coverage",
+    "JUnit.AbstractMappingStreamObserverTest.executor": "Run",
+    "JUnit.BuildersTest.executor": "Run",
     "JUnit.HttpResolverClientTest.executor": "Run",
+    "JUnit.HttpServiceRegistryTest.executor": "Run",
+    "JUnit.HttpServiceRegistryTest.shouldFindEndpoints.executor": "Debug",
+    "JUnit.HttpServiceRegistryTest.shouldThrowIfEndpointsNotFound.executor": "Debug",
+    "JUnit.HttpServiceRegistryTest.testUriWithNoScheme.executor": "Debug",
+    "JUnit.HttpServiceRegistryTest.testUriWithPath.executor": "Debug",
     "JUnit.IdentityTest.wontBuildWithNullInputs.executor": "Run",
+    "JUnit.IoticsApiTest.executor": "Run",
     "JUnit.JWTTest.parsesValidTokens.executor": "Run",
     "JUnit.JnaSdkApiInitialiserTest.executor": "Debug",
     "JUnit.JnaSdkApiInitialiserTest.failLibraryLoadingOnWindows.executor": "Run",
     "JUnit.JnaSdkApiInitialiserTest.libraryLoadingOnWindows.executor": "Run",
     "JUnit.ListenableFutureAdapterTest (1).executor": "Run",
+    "JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures.executor": "Run",
     "JUnit.ListenableFutureAdapterTest.executor": "Coverage",
     "JUnit.OsLibraryPathResolverTest.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.testLibraryPath.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.testLibraryPathLinux.executor": "Run",
+    "JUnit.SimpleIdentityImplTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken.executor": "Debug",
+    "JUnit.TokenInjectorClientInterceptorTest.interceptCallAddsAuthorizationHeader.executor": "Run",
     "JUnit.TokenTimerSchedulerTest.executor": "Run",
+    "JUnit.java in iotics-agent-core.executor": "Coverage",
     "JUnit.java in iotics-identity-core (1).executor": "Run",
     "JUnit.java in iotics-identity-core.executor": "Coverage",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
@@ -88,6 +118,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="smartrics.iotics.host.grpc" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-agent-core\src\main\java\smartrics\iotics\host" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-lib\src\main\java\smartrics\iotics\identity" />
@@ -112,10 +145,10 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="smartrics.iotics.host.grpc" />
+      <recent name="smartrics.iotics.host" />
       <recent name="smartrics.iotics.host.grpc.token" />
       <recent name="smartrics.iotics.identity.resolver" />
       <recent name="smartrics.iotics.identity.experimental" />
-      <recent name="smartrics.iotics.identity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="smartrics.iotics.host" />
@@ -124,7 +157,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures">
+  <component name="RunManager" selected="JUnit.HostConnectionImplTest">
     <configuration name="AbstractMappingStreamObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-core" />
       <extension name="coverage">
@@ -140,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListenableFutureAdapterTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HostConnectionImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-core" />
       <extension name="coverage">
         <pattern>
@@ -149,84 +182,64 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.ListenableFutureAdapterTest" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.HostConnectionImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListenableFutureAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IoticsApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.grpc.*" />
+          <option name="PATTERN" value="smartrics.iotics.host.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.ListenableFutureAdapterTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.host" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.IoticsApiTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea -XX:+EnableDynamicAgentLoading" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListenableFutureAdapterTest.cancelShouldCancelBothFutures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-core" />
+    <configuration name="SimpleIdentityImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-identity-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.grpc.*" />
+          <option name="PATTERN" value="smartrics.iotics.identity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.ListenableFutureAdapterTest" />
-      <option name="METHOD_NAME" value="cancelShouldCancelBothFutures" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.identity" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.SimpleIdentityImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TokenTimerSchedulerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="java in iotics-agent-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.grpc.token.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc.token" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.token.TokenTimerSchedulerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/iotics-agent-core/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ListenableFutureAdapterTest (1)" />
-      <item itemvalue="JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures" />
+      <item itemvalue="JUnit.HostConnectionImplTest" />
+      <item itemvalue="JUnit.IoticsApiTest" />
+      <item itemvalue="JUnit.SimpleIdentityImplTest" />
+      <item itemvalue="JUnit.java in iotics-agent-core" />
       <item itemvalue="JUnit.AbstractMappingStreamObserverTest" />
-      <item itemvalue="JUnit.ListenableFutureAdapterTest" />
-      <item itemvalue="JUnit.TokenTimerSchedulerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures" />
-        <item itemvalue="JUnit.ListenableFutureAdapterTest (1)" />
-        <item itemvalue="JUnit.ListenableFutureAdapterTest" />
+        <item itemvalue="JUnit.HostConnectionImplTest" />
+        <item itemvalue="JUnit.java in iotics-agent-core" />
         <item itemvalue="JUnit.AbstractMappingStreamObserverTest" />
-        <item itemvalue="JUnit.TokenTimerSchedulerTest" />
+        <item itemvalue="JUnit.IoticsApiTest" />
+        <item itemvalue="JUnit.SimpleIdentityImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -331,6 +344,11 @@
           <line>96</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -341,6 +359,7 @@
     <SUITE FILE_PATH="coverage/iotics4j$SimpleIdentityManagerTest.ic" NAME="SimpleIdentityManagerTest Coverage Results" MODIFIED="1713298585716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.identity.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/iotics4j$java_in_iotics_agent_core.ic" NAME="java in iotics-agent-core Coverage Results" MODIFIED="1713362685269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/iotics4j$java_in_iotics_identity_core.ic" NAME="java in iotics-identity-core Coverage Results" MODIFIED="1713298800478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/iotics4j$AbstractMappingStreamObserverTest.ic" NAME="AbstractMappingStreamObserverTest Coverage Results" MODIFIED="1713345938236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.host.grpc.*</FILTER>

@@ -3,7 +3,8 @@ package smartrics.iotics.host;
 import com.iotics.api.FetchInterestResponse;
 import com.iotics.api.SearchResponse;
 
-public record FeedDataBag(TwinDataBag twinData, SearchResponse.FeedDetails feedDetails,
+public record FeedDataBag(TwinDataBag twinData,
+                          SearchResponse.FeedDetails feedDetails,
                           FetchInterestResponse fetchInterestResponse) {
 
     @Override

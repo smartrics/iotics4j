@@ -12,6 +12,8 @@ import smartrics.iotics.identity.IdentityManager;
 import java.time.Duration;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TokenTimerSchedulerTest {
 
     @Mock
-    private Timer mockTimer;
+    private ScheduledExecutorService mockScheduler;
     @Mock
     private IdentityManager mockIdentityManager;
 
@@ -30,7 +32,7 @@ class TokenTimerSchedulerTest {
     @BeforeEach
     void setUp() {
         duration = Duration.ofSeconds(3600); // 1 hour for the token validity
-        scheduler = new TokenTimerScheduler(mockIdentityManager, duration, mockTimer);
+        scheduler = new TokenTimerScheduler(mockIdentityManager, duration, mockScheduler);
     }
 
     @Test
@@ -38,20 +40,20 @@ class TokenTimerSchedulerTest {
         doAnswer(invocation -> {
             ((TimerTask) invocation.getArgument(0)).run();
             return null;
-        }).when(mockTimer).schedule(any(TimerTask.class), eq(0L), anyLong());
+        }).when(mockScheduler).scheduleAtFixedRate(any(Runnable.class), eq(0L), anyLong(), any());
 
         when(mockIdentityManager.newAuthenticationToken(duration)).thenReturn("newToken");
 
         scheduler.schedule();
 
-        verify(mockTimer).schedule(any(TimerTask.class), eq(0L), eq(duration.toMillis() - 10));
+        verify(mockScheduler).scheduleAtFixedRate(any(TimerTask.class), eq(0L), eq(duration.toMillis() - 10), TimeUnit.MILLISECONDS);
         assertEquals("newToken", scheduler.validToken());
     }
 
     @Test
     void testCancelTimer() {
         scheduler.cancel();
-        verify(mockTimer).cancel();
+        verify(mockScheduler).shutdown();
     }
 
     @Test

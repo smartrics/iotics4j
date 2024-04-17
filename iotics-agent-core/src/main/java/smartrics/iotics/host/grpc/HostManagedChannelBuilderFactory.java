@@ -2,6 +2,7 @@ package smartrics.iotics.host.grpc;
 
 import io.grpc.ClientInterceptor;
 import io.grpc.ManagedChannelBuilder;
+import smartrics.iotics.identity.IdentityManager;
 import smartrics.iotics.identity.SimpleIdentityManager;
 import smartrics.iotics.host.grpc.token.TokenScheduler;
 import smartrics.iotics.host.grpc.token.TokenTimerSchedulerBuilder;
@@ -11,22 +12,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Timer;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class HostManagedChannelBuilderFactory {
 
     private Duration tokenDuration;
-    private SimpleIdentityManager sim;
+    private IdentityManager sim;
     private String grpcEndpoint;
     private String userAgent;
-    private Timer timer;
+    private ScheduledExecutorService scheduler;
 
     public HostManagedChannelBuilderFactory withSGrpcEndpoint(String endpoint) {
         this.grpcEndpoint = endpoint;
         return this;
     }
 
-    public HostManagedChannelBuilderFactory withTimer(Timer timer) {
-        this.timer = timer;
+    public HostManagedChannelBuilderFactory withScheduler(ScheduledExecutorService scheduler) {
+        this.scheduler = scheduler;
         return this;
     }
 
@@ -35,7 +37,7 @@ public class HostManagedChannelBuilderFactory {
         return this;
     }
 
-    public HostManagedChannelBuilderFactory withSimpleIdentityManager(SimpleIdentityManager sim) {
+    public HostManagedChannelBuilderFactory withIdentityManager(IdentityManager sim) {
         this.sim = sim;
         return this;
     }
@@ -48,15 +50,15 @@ public class HostManagedChannelBuilderFactory {
     public ManagedChannelBuilder<?> makeManagedChannelBuilder() {
         var builder = ManagedChannelBuilder.forTarget(grpcEndpoint);
 
-        TokenScheduler scheduler = TokenTimerSchedulerBuilder
+        TokenScheduler tokenScheduler = TokenTimerSchedulerBuilder
                 .aTokenTimerScheduler()
-                .withTimer(timer)
+                .withScheduler(scheduler)
                 .withDuration(tokenDuration)
                 .withIdentityManager(sim)
                 .build();
-        scheduler.schedule();
+        tokenScheduler.schedule();
 
-        TokenInjectorClientInterceptor tokenInjectorClientInterceptor = new TokenInjectorClientInterceptor(scheduler);
+        TokenInjectorClientInterceptor tokenInjectorClientInterceptor = new TokenInjectorClientInterceptor(tokenScheduler);
         List<ClientInterceptor> interceptorList = new ArrayList<>();
         interceptorList.add(tokenInjectorClientInterceptor);
         builder.intercept(interceptorList);

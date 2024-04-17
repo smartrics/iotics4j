@@ -4,9 +4,10 @@ import smartrics.iotics.identity.IdentityManager;
 
 import java.time.Duration;
 import java.util.Timer;
+import java.util.concurrent.ScheduledExecutorService;
 
 public final class TokenTimerSchedulerBuilder {
-    private Timer timer = new Timer("token-timer-scheduler");
+    private ScheduledExecutorService scheduler;
     private IdentityManager identityManager;
     private Duration duration;
 
@@ -17,8 +18,8 @@ public final class TokenTimerSchedulerBuilder {
         return new TokenTimerSchedulerBuilder();
     }
 
-    public TokenTimerSchedulerBuilder withTimer(Timer timer) {
-        this.timer = timer;
+    public TokenTimerSchedulerBuilder withScheduler(ScheduledExecutorService scheduler) {
+        this.scheduler = scheduler;
         return this;
     }
 
@@ -33,6 +34,6 @@ public final class TokenTimerSchedulerBuilder {
     }
 
     public TokenTimerScheduler build() {
-        return new TokenTimerScheduler(identityManager, duration, timer);
+        return new TokenTimerScheduler(identityManager, duration, scheduler);
     }
 }

@@ -4,6 +4,7 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.iotics.api.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import smartrics.iotics.host.grpc.HostConnection;
 import smartrics.iotics.host.grpc.HostManagedChannelBuilderFactory;
 import smartrics.iotics.identity.IdentityManager;
 import smartrics.iotics.identity.SimpleConfig;
@@ -14,9 +15,16 @@ import java.util.Timer;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * The IoticsApi class manages the setup and interactions with Iotics gRPC services.
+ * This includes managing channels, stubs for different API services, and the identity management necessary
+ * for authentication and authorization.
+ *
+ * <p>It encapsulates the process of creating and managing connections to the Iotics space through gRPC, handling
+ * identity via {@link SimpleIdentityManager}, and scheduling token renewals with a {@link Timer}.
+ */
 public class IoticsApi {
-    protected final SimpleIdentityManager sim;
-    protected final ManagedChannel channel;
+
     private final TwinAPIGrpc.TwinAPIFutureStub twinAPIFutureStub;
     private final FeedAPIGrpc.FeedAPIFutureStub feedAPIFutureStub;
     private final FeedAPIGrpc.FeedAPIStub feedAPIStub;
@@ -25,29 +33,16 @@ public class IoticsApi {
     private final InterestAPIGrpc.InterestAPIBlockingStub interestAPIBlockingStub;
     private final SearchAPIGrpc.SearchAPIStub searchAPIStub;
     private final MetaAPIGrpc.MetaAPIStub metaAPIStub;
-    private final Timer timer;
+    private final HostConnection connection;
 
-    public IoticsApi(IoticSpace ioticSpace, SimpleConfig userConf, SimpleConfig agentConf, Duration tokenValidityDuration) {
-        sim = SimpleIdentityManager.Builder
-                .anIdentityManager()
-                .withAgentKeyID(agentConf.keyId())
-                .withUserKeyID(userConf.keyId())
-                .withAgentKeyName(agentConf.keyName())
-                .withUserKeyName(userConf.keyName())
-                .build();
-        timer = new Timer("token-scheduler");
-
-        ManagedChannelBuilder<?> channelBuilder = new HostManagedChannelBuilderFactory()
-                .withSimpleIdentityManager(sim)
-                .withTimer(timer)
-                .withSGrpcEndpoint(ioticSpace.endpoints().grpc())
-                .withTokenTokenDuration(tokenValidityDuration)
-                .makeManagedChannelBuilder();
-        channel = channelBuilder
-                .executor(Executors.newCachedThreadPool(new ThreadFactoryBuilder().setNameFormat("iot-grpc-%d").build()))
-//                .keepAliveWithoutCalls(true)
-                .build();
-
+    /**
+     * Constructs an IoticsApi instance configured to interact with a specific Host.
+     *
+     * @param connection The connection to IOTICS Host.
+     */
+    public IoticsApi(HostConnection connection) {
+        this.connection = connection;
+        ManagedChannel channel = connection.getGrpcChannel();
         this.twinAPIFutureStub = TwinAPIGrpc.newFutureStub(channel);
         this.feedAPIFutureStub = FeedAPIGrpc.newFutureStub(channel);
         this.feedAPIStub = FeedAPIGrpc.newStub(channel);
@@ -58,13 +53,15 @@ public class IoticsApi {
         this.searchAPIStub = SearchAPIGrpc.newStub(channel);
     }
 
+    /**
+     * Stops all activities managed by this instance, including shutting down gRPC services and cancelling the timer.
+     *
+     * @param timeout The maximum time to wait for the services to shut down.
+     */
     public void stop(Duration timeout) {
-        timer.cancel();
         try {
-            channel.shutdown().awaitTermination(timeout.getSeconds(), TimeUnit.SECONDS);
-            channel.shutdownNow();
+            connection.shutdown(timeout);
         } catch (InterruptedException e) {
-            // TOOD fix this handling of IEx
             throw new RuntimeException(e);
         }
 
@@ -102,7 +99,4 @@ public class IoticsApi {
         return metaAPIStub;
     }
 
-    public IdentityManager getSim() {
-        return this.sim;
-    }
 }
