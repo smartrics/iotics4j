@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="cleaned up code">
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserverTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,7 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.App.executor": "Run",
+    "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
     "JUnit.HttpResolverClientTest.executor": "Run",
     "JUnit.IdentityTest.wontBuildWithNullInputs.executor": "Run",
     "JUnit.JWTTest.parsesValidTokens.executor": "Run",
@@ -108,6 +111,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="smartrics.iotics.host.grpc" />
       <recent name="smartrics.iotics.host.grpc.token" />
       <recent name="smartrics.iotics.identity.resolver" />
       <recent name="smartrics.iotics.identity.experimental" />
@@ -120,7 +124,22 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in iotics-identity-core (1)">
+  <component name="RunManager" selected="JUnit.TokenTimerSchedulerTest">
+    <configuration name="AbstractDelegatingStreamObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.host.grpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.AbstractDelegatingStreamObserverTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleIdentityManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-identity-core" />
       <extension name="coverage">
@@ -132,22 +151,6 @@
       <option name="PACKAGE_NAME" value="smartrics.iotics.identity" />
       <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.SimpleIdentityManagerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleIdentityManagerTest.testNewAuthenticationToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-identity-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.identity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.identity" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.SimpleIdentityManagerTest" />
-      <option name="METHOD_NAME" value="testNewAuthenticationToken" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in iotics-identity-core (1)" />
         <item itemvalue="JUnit.TokenTimerSchedulerTest" />
+        <item itemvalue="JUnit.AbstractDelegatingStreamObserverTest" />
+        <item itemvalue="JUnit.java in iotics-identity-core (1)" />
         <item itemvalue="JUnit.java in iotics-identity-core" />
         <item itemvalue="JUnit.SimpleIdentityManagerTest" />
-        <item itemvalue="JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken" />
       </list>
     </recent_temporary>
   </component>
