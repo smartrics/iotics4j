@@ -38,7 +38,7 @@ class TokenTimerSchedulerTest {
     @Test
     void testScheduleTokenRefresh() {
         doAnswer(invocation -> {
-            ((TimerTask) invocation.getArgument(0)).run();
+            ((Runnable) invocation.getArgument(0)).run();
             return null;
         }).when(mockScheduler).scheduleAtFixedRate(any(Runnable.class), eq(0L), anyLong(), any());
 
@@ -46,7 +46,12 @@ class TokenTimerSchedulerTest {
 
         scheduler.schedule();
 
-        verify(mockScheduler).scheduleAtFixedRate(any(TimerTask.class), eq(0L), eq(duration.toMillis() - 10), TimeUnit.MILLISECONDS);
+        verify(mockScheduler)
+                .scheduleAtFixedRate(
+                        any(Runnable.class),
+                        eq(0L),
+                        eq(duration.toMillis() - 10),
+                        eq(TimeUnit.MILLISECONDS));
         assertEquals("newToken", scheduler.validToken());
     }
 
@@ -67,6 +72,6 @@ class TokenTimerSchedulerTest {
         Exception exception = assertThrows(IllegalStateException.class, () ->
                 new TokenTimerScheduler(mockIdentityManager, duration, null).schedule()
         );
-        assertEquals("null timer", exception.getMessage());
+        assertEquals("null scheduler", exception.getMessage());
     }
 }
