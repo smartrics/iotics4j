@@ -5,27 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="cleaned up code">
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnectionImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/BuildersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/DataFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/HttpServiceRegistryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/IoticsApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/HostConnectionImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/TokenInjectorClientInterceptorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/connector/AbstractConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/connector/Jsonifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/connector/OntConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/connector/PrefixGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AbstractTwin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/ApiUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Describer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/FindAndBindTwin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/FindAndDescribeTwin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/FindAndDoTwin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Identifiable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/JsonPathMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Maker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Mappable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/MappableMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/MappablePublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/SearchException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Searcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Feed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/GenericInvoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostAllowList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostMetadataAllowList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Property.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/SampleTwin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Vocabulary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HttpServiceRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/token/TokenTimerSchedulerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/App.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +75,7 @@
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
     "JUnit.AbstractMappingStreamObserverTest.executor": "Run",
     "JUnit.BuildersTest.executor": "Run",
+    "JUnit.HostConnectionImplTest.executor": "Run",
     "JUnit.HttpResolverClientTest.executor": "Run",
     "JUnit.HttpServiceRegistryTest.executor": "Run",
     "JUnit.HttpServiceRegistryTest.shouldFindEndpoints.executor": "Debug",
@@ -110,7 +122,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/fab_c/work/github/smartrics/iotics4j/modules/iotics-agent-core/src/main/java/smartrics/iotics/host",
+    "last_opened_file_path": "C:/Users/fab_c/work/github/smartrics/iotics4j/iotics-agent-twins/src/main/java/smartrics/iotics/connectors",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3045977",
@@ -122,11 +134,11 @@
       <recent name="smartrics.iotics.host.grpc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\iotics-agent-twins\src\main\java\smartrics\iotics\connectors" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-agent-core\src\main\java\smartrics\iotics\host" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-lib\src\main\java\smartrics\iotics\identity" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-core\src\test\resources" />
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-core\src\test\java\smartrics\iotics\identity" />
-      <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j\modules\iotics-identity-core\src\main\java\smartrics\iotics\identity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\fab_c\work\github\smartrics\iotics4j" />
@@ -157,7 +169,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HostConnectionImplTest">
+  <component name="RunManager" selected="JUnit.SimpleIdentityImplTest">
     <configuration name="AbstractMappingStreamObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-core" />
       <extension name="coverage">
@@ -235,11 +247,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleIdentityImplTest" />
         <item itemvalue="JUnit.HostConnectionImplTest" />
         <item itemvalue="JUnit.java in iotics-agent-core" />
         <item itemvalue="JUnit.AbstractMappingStreamObserverTest" />
         <item itemvalue="JUnit.IoticsApiTest" />
-        <item itemvalue="JUnit.SimpleIdentityImplTest" />
       </list>
     </recent_temporary>
   </component>

@@ -2,13 +2,12 @@ package smartrics.iotics.host;
 
 import java.io.IOException;
 
-
-public class IoticSpace {
+public class Host {
 
     private final ServiceRegistry serviceRegistry;
     private HostEndpoints endpoints;
 
-    public IoticSpace(ServiceRegistry serviceRegistry) {
+    public Host(ServiceRegistry serviceRegistry) {
         this.serviceRegistry = serviceRegistry;
     }
 
@@ -18,13 +17,5 @@ public class IoticSpace {
 
     public HostEndpoints endpoints() {
         return this.endpoints;
-    }
-
-    @Override
-    public String toString() {
-        return "IOTICSpace{" +
-                "serviceRegistry=" + serviceRegistry +
-                ", endpoints=" + endpoints +
-                '}';
     }
 }
