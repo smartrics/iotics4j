@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="cleaned up code">
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/grpc/AbstractMappingStreamObserverTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/AbstractDelegatingStreamObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +43,15 @@
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.App.executor": "Run",
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
+    "JUnit.AbstractMappingStreamObserverTest.executor": "Coverage",
     "JUnit.HttpResolverClientTest.executor": "Run",
     "JUnit.IdentityTest.wontBuildWithNullInputs.executor": "Run",
     "JUnit.JWTTest.parsesValidTokens.executor": "Run",
     "JUnit.JnaSdkApiInitialiserTest.executor": "Debug",
     "JUnit.JnaSdkApiInitialiserTest.failLibraryLoadingOnWindows.executor": "Run",
     "JUnit.JnaSdkApiInitialiserTest.libraryLoadingOnWindows.executor": "Run",
+    "JUnit.ListenableFutureAdapterTest (1).executor": "Run",
+    "JUnit.ListenableFutureAdapterTest.executor": "Coverage",
     "JUnit.OsLibraryPathResolverTest.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.testLibraryPath.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.testLibraryPathLinux.executor": "Run",
@@ -84,7 +84,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3045977",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "build.tools"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -124,8 +124,8 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TokenTimerSchedulerTest">
-    <configuration name="AbstractDelegatingStreamObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures">
+    <configuration name="AbstractMappingStreamObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-core" />
       <extension name="coverage">
         <pattern>
@@ -134,23 +134,66 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.AbstractDelegatingStreamObserverTest" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.AbstractMappingStreamObserverTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleIdentityManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-identity-core" />
+    <configuration name="ListenableFutureAdapterTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.identity.*" />
+          <option name="PATTERN" value="smartrics.iotics.host.grpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.identity" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.SimpleIdentityManagerTest" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.ListenableFutureAdapterTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListenableFutureAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.host.grpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.ListenableFutureAdapterTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -XX:+EnableDynamicAgentLoading" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListenableFutureAdapterTest.cancelShouldCancelBothFutures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.host.grpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.host.grpc" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.grpc.ListenableFutureAdapterTest" />
+      <option name="METHOD_NAME" value="cancelShouldCancelBothFutures" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,29 +213,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in iotics-identity-core (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-identity-core" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/iotics-identity-core/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java in iotics-identity-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-identity-core" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/modules/iotics-identity-core/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="JUnit.ListenableFutureAdapterTest (1)" />
+      <item itemvalue="JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures" />
+      <item itemvalue="JUnit.AbstractMappingStreamObserverTest" />
+      <item itemvalue="JUnit.ListenableFutureAdapterTest" />
+      <item itemvalue="JUnit.TokenTimerSchedulerTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures" />
+        <item itemvalue="JUnit.ListenableFutureAdapterTest (1)" />
+        <item itemvalue="JUnit.ListenableFutureAdapterTest" />
+        <item itemvalue="JUnit.AbstractMappingStreamObserverTest" />
         <item itemvalue="JUnit.TokenTimerSchedulerTest" />
-        <item itemvalue="JUnit.AbstractDelegatingStreamObserverTest" />
-        <item itemvalue="JUnit.java in iotics-identity-core (1)" />
-        <item itemvalue="JUnit.java in iotics-identity-core" />
-        <item itemvalue="JUnit.SimpleIdentityManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,9 +335,15 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/iotics4j$ListenableFutureAdapterTest.ic" NAME="ListenableFutureAdapterTest Coverage Results" MODIFIED="1713346152487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>smartrics.iotics.host.grpc.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/iotics4j$SimpleIdentityManagerTest.ic" NAME="SimpleIdentityManagerTest Coverage Results" MODIFIED="1713298585716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.identity.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/iotics4j$java_in_iotics_identity_core.ic" NAME="java in iotics-identity-core Coverage Results" MODIFIED="1713298800478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/iotics4j$AbstractMappingStreamObserverTest.ic" NAME="AbstractMappingStreamObserverTest Coverage Results" MODIFIED="1713345938236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>smartrics.iotics.host.grpc.*</FILTER>
+    </SUITE>
   </component>
 </project>
