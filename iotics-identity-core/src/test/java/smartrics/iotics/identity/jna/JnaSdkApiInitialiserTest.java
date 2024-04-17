@@ -20,7 +20,7 @@ public class JnaSdkApiInitialiserTest {
     public void libraryLoadingOnWindows() {
         OsLibraryPathResolver resolver = new OsLibraryPathResolver() {
         };
-        JnaSdkApiInitialiser initialiser = new JnaSdkApiInitialiser(resolver);
+        JnaSdkApiInitialiser initialiser = new JnaSdkApiInitialiser("../lib", resolver);
         SdkApi api = initialiser.get();
         assertNotNull(api, "The SDK API should not be null on Windows");
     }

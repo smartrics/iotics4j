@@ -13,7 +13,7 @@ public class OsLibraryPathResolverTest {
     public void testLibraryPathWin() {
         OsLibraryPathResolver resolver = new OsLibraryPathResolver() {
         };
-        String path = resolver.resolveLibraryPath("../../lib");
+        String path = resolver.resolveLibraryPath("../lib");
         assertThat(path, containsString(".dll"));
     }
 

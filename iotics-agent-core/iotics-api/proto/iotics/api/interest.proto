@@ -1,0 +1,129 @@
+// Copyright (c) 2019-2022 Iotic Labs Ltd. All rights reserved.
+
+// Iotics Web protocol definitions (interests)
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "iotics/api/common.proto";
+import "iotics/api/feed.proto";
+import "iotics/api/input.proto";
+
+package iotics.api;
+
+option csharp_namespace = "Iotics.Api";
+option go_package = "github.com/Iotic-Labs/iotic-go-proto-qapi/iotics/api;ioticsapi";
+option java_multiple_files = true;
+option java_outer_classname = "InterestProto";
+option java_package = "com.iotics.api";
+option objc_class_prefix = "IAX";
+option php_namespace = "Iotics\\Api";
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+// InterestAPI enables creation and management of interests between a twin and a feed or an input.
+service InterestAPI {
+  // Fetch feed data for this interest. (local and remote)
+  rpc FetchInterests(FetchInterestRequest) returns (stream FetchInterestResponse) {}
+
+  // Fetch last data shared on this interest. (local and remote)
+  rpc FetchLastStored(FetchLastStoredRequest) returns (FetchInterestResponse) {}
+
+  // Send a message to an input. (local and remote)
+  rpc SendInputMessage(SendInputMessageRequest) returns (SendInputMessageResponse) {}
+
+}
+
+// An interest is the relationship between a Twin and an Input.
+message InputInterest {
+  // Sender twin unique identifier.
+  TwinID senderTwinId = 1;
+
+  // a reference to the input of interest
+  InputID destInputId = 2;
+}
+
+// SendInputMessageRequest is used to send a message to a given input.
+message SendInputMessageRequest {
+  // SendInputMessageRequest payload.
+  message Payload {
+    // Message to send
+    InputMessage message = 1;
+  }
+  // SendInputMessageRequest arguments.
+  message Arguments {
+    // The interest
+    InputInterest interest = 1;
+  }
+  // SendInputMessageRequest headers
+  Headers headers = 1;
+  // SendInputMessageRequest mandatory arguments
+  Arguments args = 2;
+  // SendInputMessageRequest payload
+  Payload payload = 3;
+}
+
+// SendInputMessageResponse is used to indicate a successful send.
+message SendInputMessageResponse {
+  // SendInputMessageResponse headers
+  Headers headers = 1;
+}
+
+// An interest is the relationship between a Twin and a Feed. For example, creating
+// an interest on (following) a Feed results in any data shared on said Feed to be forwarded to
+// the associated Twin. Interests can be revoked either by the subscriber or provider and there
+// may only be one interest between any unique Twin and Feed combination.
+message Interest {
+  // Follower twin unique identifier.
+  TwinID followerTwinId = 1;
+
+  // a reference to the interested feed
+  FeedID followedFeedId = 2;
+}
+
+// ---------------------------------------
+
+// FetchInterestRequest is used to initiate a stream to get the feed data shared on a given interest.
+message FetchInterestRequest {
+  // FetchInterestRequest mandatory arguments.
+  message Arguments {
+    // The interest
+    Interest interest = 1;
+  }
+  // FetchInterestRequest headers
+  Headers headers = 1;
+  // FetchInterestRequest arguments
+  Arguments args = 2;
+  // whether to fetch the last stored value if available (false by default)
+  google.protobuf.BoolValue fetchLastStored = 3;
+}
+
+// FetchInterestResponse describes a feed value shared on a given interest.
+message FetchInterestResponse {
+  // FetchInterestResponse payload.
+  message Payload {
+    // The interest
+    Interest interest = 1;
+    // The shared data
+    FeedData feedData = 2;
+  }
+  // FetchInterestResponse headers
+  Headers headers = 1;
+  // FetchInterestResponse payload
+  Payload payload = 2;
+}
+
+// ---------------------------------------
+
+// FetchLastStoredRequest is used to fetch the last stored value on a given interest if available.
+message FetchLastStoredRequest {
+  // FetchLastStoredRequest mandatory arguments.
+  message Arguments {
+    // The interest
+    Interest interest = 1;
+  }
+  // FetchLastStoredRequest headers
+  Headers headers = 1;
+  // FetchLastStoredRequest arguments
+  Arguments args = 2;
+}
