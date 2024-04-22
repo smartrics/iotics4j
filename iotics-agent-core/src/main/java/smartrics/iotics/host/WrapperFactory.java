@@ -8,6 +8,14 @@ import smartrics.iotics.host.wrappers.*;
 
 import java.util.Iterator;
 
+/**
+ * Factory class for creating wrappers around various gRPC service stubs.
+ * This class simplifies the creation and usage of service APIs by providing
+ * methods that return higher-level abstractions of gRPC stubs tailored to
+ * specific service functionalities within an IOTICS Host. Each method returns
+ * an implementation of a service-specific API that internally uses a gRPC stub
+ * to communicate with the respective services over a given {@link ManagedChannel}.
+ */
 final class WrapperFactory {
     static TwinAPIFuture newTwinAPIFuture(ManagedChannel channel) {
         final TwinAPIGrpc.TwinAPIFutureStub delegate = TwinAPIGrpc.newFutureStub(channel);

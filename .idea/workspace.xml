@@ -4,25 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="extracted interface for testability">
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/WrapperFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/FeedAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/FeedAPIFuture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/InputAPIFuture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/InterestAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/InterestAPIBlocking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/MetaAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/SearchAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/wrappers/TwinAPIFuture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AbstractTwinTest.java" afterDir="false" />
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added api internalised interfaces for testability">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Host.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApiImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/IoticsApiImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/IoticsApiImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/ServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/WrapperFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/WrapperFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713802101798</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added api internalised interfaces for testability">
+      <option name="closed" value="true" />
+      <created>1713824744103</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713824744103</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -401,7 +402,8 @@
     <MESSAGE value="fixed unit test" />
     <MESSAGE value="added test for api" />
     <MESSAGE value="extracted interface for testability" />
-    <option name="LAST_COMMIT_MESSAGE" value="extracted interface for testability" />
+    <MESSAGE value="added api internalised interfaces for testability" />
+    <option name="LAST_COMMIT_MESSAGE" value="added api internalised interfaces for testability" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

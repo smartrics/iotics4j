@@ -9,12 +9,13 @@ import java.time.Duration;
 import java.util.Timer;
 
 /**
- * The IoticsApi class manages the setup and interactions with Iotics gRPC services.
+ * The IoticsApiImpl implements the {@code IoticsApi} interface and manages the setup and interactions with IOTICS host gRPC services.
  * This includes managing channels, stubs for different API services, and the identity management necessary
  * for authentication and authorization.
  *
- * <p>It encapsulates the process of creating and managing connections to the Iotics space through gRPC, handling
- * identity via {@link SimpleIdentityManager}, and scheduling token renewals with a {@link Timer}.
+ * <p>The API delegates to an underlying gRPC client the respective service calls.
+ *
+ * <p>Currently this implementation is very basic and doesn't handle reconnects or any other form or reliability.
  */
 public class IoticsApiImpl implements IoticsApi {
 
