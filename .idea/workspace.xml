@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added api internalised interfaces for testability">
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added missing comments">
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/DescriberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/FeedDataBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Host.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpointVersion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/HostEndpoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/IoticsApiImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/ServiceRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/TwinDataBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/WrapperFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/WrapperFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AbstractTwinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AbstractTwinTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Identity.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Identity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/IdentityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/IdentityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -54,6 +48,9 @@
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
     "JUnit.AbstractMappingStreamObserverTest.executor": "Run",
     "JUnit.BuildersTest.executor": "Run",
+    "JUnit.DescriberTest.executor": "Run",
+    "JUnit.DescriberTest.testDescribeScheduledPolling.executor": "Run",
+    "JUnit.DescriberTest.testDescribeWithTwinID.executor": "Run",
     "JUnit.HostConnectionImplTest.executor": "Run",
     "JUnit.HttpResolverClientTest.executor": "Run",
     "JUnit.HttpServiceRegistryTest.executor": "Run",
@@ -61,6 +58,7 @@
     "JUnit.HttpServiceRegistryTest.shouldThrowIfEndpointsNotFound.executor": "Debug",
     "JUnit.HttpServiceRegistryTest.testUriWithNoScheme.executor": "Debug",
     "JUnit.HttpServiceRegistryTest.testUriWithPath.executor": "Debug",
+    "JUnit.IdentityTest.executor": "Run",
     "JUnit.IdentityTest.wontBuildWithNullInputs.executor": "Run",
     "JUnit.IoticsApiImplTest.executor": "Run",
     "JUnit.IoticsApiImplTest.twinStubIsWired.executor": "Run",
@@ -142,11 +140,11 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="smartrics.iotics.identity" />
       <recent name="smartrics.iotics.connectors.twins" />
       <recent name="smartrics.iotics.host.grpc" />
       <recent name="smartrics.iotics.host" />
       <recent name="smartrics.iotics.host.grpc.token" />
-      <recent name="smartrics.iotics.identity.resolver" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="smartrics.iotics.host" />
@@ -155,100 +153,99 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IoticsApiImplTest.twinStubIsWired">
-    <configuration name="IoticsApiImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-core" />
+  <component name="RunManager" selected="JUnit.DescriberTest">
+    <configuration name="DescriberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.IoticsApiImplTest" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoticsApiImplTest.rethrowsStopException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-core" />
+    <configuration name="DescriberTest.testDescribeScheduledPolling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.IoticsApiImplTest" />
-      <option name="METHOD_NAME" value="rethrowsStopException" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
+      <option name="METHOD_NAME" value="testDescribeScheduledPolling" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoticsApiImplTest.serverRespondsCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-core" />
+    <configuration name="DescriberTest.testDescribeWithNoParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.IoticsApiImplTest" />
-      <option name="METHOD_NAME" value="serverRespondsCorrectly" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
+      <option name="METHOD_NAME" value="testDescribeWithNoParameters" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoticsApiImplTest.testListAllFeeds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-core" />
+    <configuration name="DescriberTest.testDescribeWithTwinID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.IoticsApiImplTest" />
-      <option name="METHOD_NAME" value="testListAllFeeds" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
+      <option name="METHOD_NAME" value="testDescribeWithTwinID" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoticsApiImplTest.twinStubIsWired" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-core" />
+    <configuration name="IdentityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-identity-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.host.*" />
+          <option name="PATTERN" value="smartrics.iotics.identity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.host" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.host.IoticsApiImplTest" />
-      <option name="METHOD_NAME" value="twinStubIsWired" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.identity" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.IdentityTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IoticsApiImplTest" />
-      <item itemvalue="JUnit.IoticsApiImplTest.rethrowsStopException" />
-      <item itemvalue="JUnit.IoticsApiImplTest.serverRespondsCorrectly" />
-      <item itemvalue="JUnit.IoticsApiImplTest.testListAllFeeds" />
-      <item itemvalue="JUnit.IoticsApiImplTest.twinStubIsWired" />
+      <item itemvalue="JUnit.DescriberTest" />
+      <item itemvalue="JUnit.DescriberTest.testDescribeScheduledPolling" />
+      <item itemvalue="JUnit.DescriberTest.testDescribeWithNoParameters" />
+      <item itemvalue="JUnit.DescriberTest.testDescribeWithTwinID" />
+      <item itemvalue="JUnit.IdentityTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IoticsApiImplTest.twinStubIsWired" />
-        <item itemvalue="JUnit.IoticsApiImplTest" />
-        <item itemvalue="JUnit.IoticsApiImplTest.rethrowsStopException" />
-        <item itemvalue="JUnit.IoticsApiImplTest.testListAllFeeds" />
-        <item itemvalue="JUnit.IoticsApiImplTest.serverRespondsCorrectly" />
+        <item itemvalue="JUnit.DescriberTest" />
+        <item itemvalue="JUnit.DescriberTest.testDescribeWithNoParameters" />
+        <item itemvalue="JUnit.DescriberTest.testDescribeWithTwinID" />
+        <item itemvalue="JUnit.DescriberTest.testDescribeScheduledPolling" />
+        <item itemvalue="JUnit.IdentityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713824744103</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added missing comments">
+      <option name="closed" value="true" />
+      <created>1713825574918</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713825574918</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -403,7 +408,8 @@
     <MESSAGE value="added test for api" />
     <MESSAGE value="extracted interface for testability" />
     <MESSAGE value="added api internalised interfaces for testability" />
-    <option name="LAST_COMMIT_MESSAGE" value="added api internalised interfaces for testability" />
+    <MESSAGE value="added missing comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -427,6 +433,11 @@
           <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AbstractTwin.java</url>
           <line>29</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/DescriberTest.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
