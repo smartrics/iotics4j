@@ -1,8 +1,8 @@
 package smartrics.iotics.host;
 
-import com.iotics.api.*;
 import io.grpc.ManagedChannel;
 import smartrics.iotics.host.grpc.HostConnection;
+import smartrics.iotics.host.wrappers.*;
 import smartrics.iotics.identity.SimpleIdentityManager;
 
 import java.time.Duration;
@@ -18,14 +18,14 @@ import java.util.Timer;
  */
 public class IoticsApiImpl implements IoticsApi {
 
-    private final TwinAPIGrpc.TwinAPIFutureStub twinAPIFutureStub;
-    private final FeedAPIGrpc.FeedAPIFutureStub feedAPIFutureStub;
-    private final FeedAPIGrpc.FeedAPIStub feedAPIStub;
-    private final InputAPIGrpc.InputAPIFutureStub inputAPIFutureStub;
-    private final InterestAPIGrpc.InterestAPIStub interestAPIStub;
-    private final InterestAPIGrpc.InterestAPIBlockingStub interestAPIBlockingStub;
-    private final SearchAPIGrpc.SearchAPIStub searchAPIStub;
-    private final MetaAPIGrpc.MetaAPIStub metaAPIStub;
+    private final TwinAPIFuture twinAPIFuture;
+    private final FeedAPIFuture feedAPIFuture;
+    private final FeedAPI feedAPI;
+    private final InputAPIFuture inputAPIFuture;
+    private final InterestAPI interestAPI;
+    private final InterestAPIBlocking interestAPIBlocking;
+    private final SearchAPI searchAPI;
+    private final MetaAPI metaAPI;
     private final HostConnection connection;
 
     /**
@@ -36,14 +36,14 @@ public class IoticsApiImpl implements IoticsApi {
     public IoticsApiImpl(HostConnection connection) {
         this.connection = connection;
         ManagedChannel channel = connection.getGrpcChannel();
-        this.twinAPIFutureStub = TwinAPIGrpc.newFutureStub(channel);
-        this.feedAPIFutureStub = FeedAPIGrpc.newFutureStub(channel);
-        this.feedAPIStub = FeedAPIGrpc.newStub(channel);
-        this.inputAPIFutureStub = InputAPIGrpc.newFutureStub(channel);
-        this.metaAPIStub = MetaAPIGrpc.newStub(channel);
-        this.interestAPIStub = InterestAPIGrpc.newStub(channel);
-        this.interestAPIBlockingStub = InterestAPIGrpc.newBlockingStub(channel);
-        this.searchAPIStub = SearchAPIGrpc.newStub(channel);
+        this.twinAPIFuture = WrapperFactory.newTwinAPIFuture(channel);
+        this.feedAPIFuture = WrapperFactory.newFeedAPIFuture(channel);
+        this.feedAPI = WrapperFactory.newFeedApi(channel);
+        this.inputAPIFuture = WrapperFactory.newInputAPIFuture(channel);
+        this.metaAPI = WrapperFactory.newMetaAPI(channel);
+        this.interestAPI = WrapperFactory.newInterestAPI(channel);
+        this.interestAPIBlocking = WrapperFactory.newInterestAPIBlocking(channel);
+        this.searchAPI = WrapperFactory.newSearchAPI(channel);
     }
 
     /**
@@ -65,43 +65,43 @@ public class IoticsApiImpl implements IoticsApi {
     }
 
     @Override
-    public TwinAPIGrpc.TwinAPIFutureStub twinAPIFutureStub() {
-        return twinAPIFutureStub;
+    public TwinAPIFuture twinAPIFuture() {
+        return twinAPIFuture;
     }
 
     @Override
-    public FeedAPIGrpc.FeedAPIFutureStub feedAPIFutureStub() {
-        return feedAPIFutureStub;
+    public FeedAPIFuture feedAPIFuture() {
+        return feedAPIFuture;
     }
 
     @Override
-    public FeedAPIGrpc.FeedAPIStub feedAPIStub() {
-        return feedAPIStub;
+    public FeedAPI feedAPI() {
+        return feedAPI;
     }
 
     @Override
-    public InputAPIGrpc.InputAPIFutureStub inputAPIFutureStub() {
-        return inputAPIFutureStub;
+    public InputAPIFuture inputAPIFuture() {
+        return inputAPIFuture;
     }
 
     @Override
-    public InterestAPIGrpc.InterestAPIStub interestAPIStub() {
-        return interestAPIStub;
+    public InterestAPI interestAPI() {
+        return interestAPI;
     }
 
     @Override
-    public InterestAPIGrpc.InterestAPIBlockingStub interestAPIBlockingStub() {
-        return interestAPIBlockingStub;
+    public InterestAPIBlocking interestAPIBlocking() {
+        return interestAPIBlocking;
     }
 
     @Override
-    public SearchAPIGrpc.SearchAPIStub searchAPIStub() {
-        return searchAPIStub;
+    public SearchAPI searchAPI() {
+        return searchAPI;
     }
 
     @Override
-    public MetaAPIGrpc.MetaAPIStub metaAPIStub() {
-        return metaAPIStub;
+    public MetaAPI metaAPI() {
+        return metaAPI;
     }
 
 }

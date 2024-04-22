@@ -13,13 +13,12 @@ import smartrics.iotics.host.grpc.HostConnection;
 import io.grpc.inprocess.InProcessChannelBuilder;
 import io.grpc.inprocess.InProcessServerBuilder;
 import io.grpc.testing.GrpcCleanupRule;
+import smartrics.iotics.host.wrappers.TwinAPIFuture;
 
 import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.AdditionalAnswers.delegatesTo;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 
 public class IoticsApiImplTest {
@@ -65,13 +64,13 @@ public class IoticsApiImplTest {
     @Test
     /* other methods need to be checked for wiring */
     public void twinStubIsWired() throws Exception {
-        TwinAPIGrpc.TwinAPIFutureStub stub = api.twinAPIFutureStub();
+        TwinAPIFuture tApi = api.twinAPIFuture();
         ListAllTwinsRequest request = ListAllTwinsRequest.newBuilder()
                 .setHeaders(Headers.newBuilder().setClientRef("cli1").build())
                 .build();
 
 
-        ListenableFuture<ListAllTwinsResponse> res = stub.listAllTwins(request);
+        ListenableFuture<ListAllTwinsResponse> res = tApi.listAllTwins(request);
 
         assertEquals("cli1", res.get().getHeaders().getClientRef());
 

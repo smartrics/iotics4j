@@ -1,25 +1,25 @@
 package smartrics.iotics.host;
 
-import com.iotics.api.*;
+import smartrics.iotics.host.wrappers.*;
 
 import java.time.Duration;
 
 public interface IoticsApi {
     void stop(Duration timeout);
 
-    TwinAPIGrpc.TwinAPIFutureStub twinAPIFutureStub();
+    TwinAPIFuture twinAPIFuture();
 
-    FeedAPIGrpc.FeedAPIFutureStub feedAPIFutureStub();
+    FeedAPIFuture feedAPIFuture();
 
-    FeedAPIGrpc.FeedAPIStub feedAPIStub();
+    FeedAPI feedAPI();
 
-    InputAPIGrpc.InputAPIFutureStub inputAPIFutureStub();
+    InputAPIFuture inputAPIFuture();
 
-    InterestAPIGrpc.InterestAPIStub interestAPIStub();
+    InterestAPI interestAPI();
 
-    InterestAPIGrpc.InterestAPIBlockingStub interestAPIBlockingStub();
+    InterestAPIBlocking interestAPIBlocking();
 
-    SearchAPIGrpc.SearchAPIStub searchAPIStub();
+    SearchAPI searchAPI();
 
-    MetaAPIGrpc.MetaAPIStub metaAPIStub();
+    MetaAPI metaAPI();
 }
