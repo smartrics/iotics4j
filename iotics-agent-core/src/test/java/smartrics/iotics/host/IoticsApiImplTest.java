@@ -8,10 +8,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.mockito.ArgumentCaptor;
-import org.mockito.ArgumentMatchers;
-import org.mockito.Captor;
-import org.mockito.Mock;
 import smartrics.iotics.host.grpc.HostConnection;
 
 import io.grpc.inprocess.InProcessChannelBuilder;
@@ -19,8 +15,6 @@ import io.grpc.inprocess.InProcessServerBuilder;
 import io.grpc.testing.GrpcCleanupRule;
 
 import java.time.Duration;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.AdditionalAnswers.delegatesTo;
@@ -28,14 +22,14 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 
-public class IoticsApiTest {
+public class IoticsApiImplTest {
 
     @Rule
     public final GrpcCleanupRule grpcCleanup = new GrpcCleanupRule();
 
     private HostConnection hostConnection;
 
-    private IoticsApi api;
+    private IoticsApiImpl api;
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
@@ -63,7 +57,7 @@ public class IoticsApiTest {
         hostConnection = mock(HostConnection.class);
         when(hostConnection.getGrpcChannel()).thenReturn(channel);
 
-        api = new IoticsApi(hostConnection);
+        api = new IoticsApiImpl(hostConnection);
 
 
     }
