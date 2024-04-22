@@ -62,7 +62,10 @@ public class IoticsApi {
         try {
             connection.shutdown(timeout);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            // Preserve interrupt status
+            Thread.currentThread().interrupt();
+            // Consider adding more context or handling differently
+            throw new RuntimeException("Failed to shut down connection within the provided timeout: " + timeout, e);
         }
 
     }
