@@ -12,8 +12,6 @@ import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.host.Builders;
 
 import java.time.Duration;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
@@ -29,11 +27,11 @@ public interface Describer extends Identifiable, ApiUser {
      * Uses a given scheduler to execute the retrieval at a fixed rate defined by initialDelay and pollingFrequency.
      * Results are communicated through a StreamObserver.
      *
-     * @param twinID The unique identifier of the twin to describe.
-     * @param scheduler The scheduled executor service to manage timing of retrieval tasks.
-     * @param initialDelay The initial delay before the first retrieval is executed.
+     * @param twinID           The unique identifier of the twin to describe.
+     * @param scheduler        The scheduled executor service to manage timing of retrieval tasks.
+     * @param initialDelay     The initial delay before the first retrieval is executed.
      * @param pollingFrequency The frequency with which twin details are retrieved.
-     * @param result The observer to handle responses or failures of the retrieval tasks.
+     * @param result           The observer to handle responses or failures of the retrieval tasks.
      */
     default void describe(TwinID twinID, @NotNull ScheduledExecutorService scheduler, @NotNull Duration initialDelay, @NotNull Duration pollingFrequency, StreamObserver<DescribeTwinResponse> result) {
         scheduler.scheduleAtFixedRate(() -> {

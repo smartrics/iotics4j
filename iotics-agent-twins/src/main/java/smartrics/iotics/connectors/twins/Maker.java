@@ -4,7 +4,6 @@ import com.google.common.util.concurrent.*;
 import com.iotics.api.*;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
-import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.host.Builders;
 
@@ -65,8 +64,8 @@ public interface Maker extends Identifiable, Describer {
      * Callback for handling responses from the describe operation, potentially triggering an upsert
      * if the twin is not found.
      *
-     * @param maker the instance of Maker to use for upserting if necessary
-     * @param future the future to be completed with the result
+     * @param maker    the instance of Maker to use for upserting if necessary
+     * @param future   the future to be completed with the result
      * @param executor the executor to run asynchronous operations
      * @return a callback that processes the result of the describe operation
      */

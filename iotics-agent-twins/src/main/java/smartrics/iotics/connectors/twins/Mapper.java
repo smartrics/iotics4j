@@ -2,7 +2,6 @@ package smartrics.iotics.connectors.twins;
 
 import com.iotics.api.ShareFeedDataRequest;
 import com.iotics.api.UpsertTwinRequest;
-import smartrics.iotics.identity.Identity;
 
 import java.util.List;
 
