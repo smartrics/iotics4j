@@ -1,16 +1,18 @@
 package smartrics.iotics.connectors.twins;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import com.google.protobuf.ByteString;
 import com.google.rpc.Status;
 import com.iotics.api.SparqlQueryResponse;
 import io.grpc.stub.StreamObserver;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.*;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.eq;
+import static org.mockito.Mockito.verify;
 
 class SparqlQueryResponseStreamObserverTest {
 
