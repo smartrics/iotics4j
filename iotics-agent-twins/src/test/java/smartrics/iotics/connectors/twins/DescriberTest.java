@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import smartrics.iotics.host.IoticsApi;
 import smartrics.iotics.host.wrappers.TwinAPIFuture;
-import smartrics.iotics.identity.Identity;
 
 import java.time.Duration;
 import java.util.concurrent.Executors;
@@ -34,22 +33,7 @@ class DescriberTest {
         streamObserver = mock(StreamObserver.class);
         executorService = Executors.newSingleThreadScheduledExecutor();
 
-        describer = new Describer() {
-            @Override
-            public Identity getMyIdentity() {
-                return new Identity("keyName", "name", "did");
-            }
-
-            @Override
-            public Identity getAgentIdentity() {
-                return new Identity("agentKey", "agentName", "agentDid");
-            }
-
-            @Override
-            public IoticsApi ioticsApi() {
-                return ioticsApi;
-            }
-        };
+        describer = new ConcreteDescriber(ioticsApi);
 
         when(ioticsApi.twinAPIFuture()).thenReturn(twinAPIFuture);
     }
@@ -81,7 +65,6 @@ class DescriberTest {
         verify(streamObserver, atLeastOnce()).onNext(expectedResponse);
     }
 
-
     @Test
     void testDescribeWithNoParameters() throws Exception {
         SettableFuture<DescribeTwinResponse> futureResponse = SettableFuture.create();
@@ -106,5 +89,11 @@ class DescriberTest {
         ListenableFuture<DescribeTwinResponse> response = describer.describe(twinID);
 
         assertEquals(expectedResponse, response.get());
+    }
+
+    private static class ConcreteDescriber extends BaseTwin implements Describer {
+        ConcreteDescriber(IoticsApi api) {
+            super(api);
+        }
     }
 }

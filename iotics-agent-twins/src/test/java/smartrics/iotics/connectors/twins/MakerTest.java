@@ -1,16 +1,16 @@
 package smartrics.iotics.connectors.twins;
 
-import com.google.common.util.concurrent.*;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.common.util.concurrent.SettableFuture;
 import com.iotics.api.*;
-import org.junit.jupiter.api.*;
-import org.mockito.*;
-import smartrics.iotics.host.Builders;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 import smartrics.iotics.host.IoticsApi;
 import smartrics.iotics.host.wrappers.TwinAPIFuture;
-import smartrics.iotics.identity.Identity;
 
-import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 class MakerTest {
 
@@ -24,27 +24,7 @@ class MakerTest {
         twinAPIFuture = mock(TwinAPIFuture.class);
         when(ioticsApi.twinAPIFuture()).thenReturn(twinAPIFuture);
 
-        maker = new Maker() {
-            @Override
-            public ListenableFuture<UpsertTwinResponse> upsert() {
-                return null;
-            }
-
-            @Override
-            public Identity getMyIdentity() {
-                return new Identity("keyName", "John Doe", "did123");
-            }
-
-            @Override
-            public Identity getAgentIdentity() {
-                return new Identity("keyName", "Agent Name", "agentDid123");
-            }
-
-            @Override
-            public IoticsApi ioticsApi() {
-                return ioticsApi;
-            }
-        };
+        maker = new ConcreteMaker(ioticsApi);
     }
 
     @Test
@@ -66,13 +46,10 @@ class MakerTest {
 
         assertSame(futureResponse, response);
     }
+
     @Test
     void testMakeIfAbsent_ExistingTwin() {
-        DescribeTwinResponse describeResponse = DescribeTwinResponse.newBuilder()
-                .setPayload(DescribeTwinResponse.Payload.newBuilder()
-                        .setTwinId(TwinID.newBuilder().setId("did123").build())
-                        .build())
-                .build();
+        DescribeTwinResponse describeResponse = DescribeTwinResponse.newBuilder().setPayload(DescribeTwinResponse.Payload.newBuilder().setTwinId(TwinID.newBuilder().setId("did123").build()).build()).build();
         SettableFuture<DescribeTwinResponse> describeFuture = SettableFuture.create();
         describeFuture.set(describeResponse);
         when(twinAPIFuture.describeTwin(any(DescribeTwinRequest.class))).thenReturn(describeFuture);
@@ -81,5 +58,16 @@ class MakerTest {
 
         assertTrue(result.isDone());
         assertDoesNotThrow(() -> assertEquals("did123", result.get().getId()));
+    }
+
+    private static class ConcreteMaker extends BaseTwin implements Maker {
+        ConcreteMaker(IoticsApi api) {
+            super(api);
+        }
+
+        @Override
+        public ListenableFuture<UpsertTwinResponse> upsert() {
+            return null;
+        }
     }
 }

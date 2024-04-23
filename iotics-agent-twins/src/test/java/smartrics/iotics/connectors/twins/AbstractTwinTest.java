@@ -7,8 +7,5 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AbstractTwinTest {
 
-    @RegisterExtension
-    public final GrpcCleanupRule grpcCleanup = new GrpcCleanupRule();
-
 
 }
