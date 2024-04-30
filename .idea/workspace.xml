@@ -4,12 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added missing comments">
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/DescriberTest.java" afterDir="false" />
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added files">
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/AnnotationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Feed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/GenericInvoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostAllowList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostMetadataAllowList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/LangLiteralProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/LiteralProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/StringLiteralProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/UriProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/XsdDatatype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/XsdDatatypeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AbstractTwinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AbstractTwinTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Identity.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Identity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/IdentityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/IdentityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +33,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
+        <option value="Enum" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,12 +59,34 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.App.executor": "Run",
+    "Application.SampleTwin.executor": "Run",
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
     "JUnit.AbstractMappingStreamObserverTest.executor": "Run",
     "JUnit.BuildersTest.executor": "Run",
     "JUnit.DescriberTest.executor": "Run",
     "JUnit.DescriberTest.testDescribeScheduledPolling.executor": "Run",
+    "JUnit.DescriberTest.testDescribeWithNoParameters.executor": "Run",
     "JUnit.DescriberTest.testDescribeWithTwinID.executor": "Run",
+    "JUnit.FollowerTest.executor": "Run",
+    "JUnit.FollowerTest.testFollowWithRetry.executor": "Run",
+    "JUnit.FollowerTest.testFollowWithRetryOnCompleted.executor": "Run",
+    "JUnit.FollowerTest.testFollowWithRetryOnError.executor": "Run",
+    "JUnit.GenericInvokerTest.executor": "Run",
+    "JUnit.GenericInvokerTest.testMethodWithException.executor": "Run",
+    "JUnit.GenericInvokerTest.testNonExistingProperty.executor": "Run",
+    "JUnit.GenericInvokerTest.testParsingFeed.executor": "Run",
+    "JUnit.GenericInvokerTest.testParsingInput.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesFromPropAndMethod.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesFromPropAndMethodWithSet.executor": "Debug",
+    "JUnit.GenericInvokerTest.testRetrievesLangLiteral.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesLangLiteralPropertyFromProperty.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesLiteralPropertyFromProperty.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesPropertyFromSet (1).executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesPropertyFromSet.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesStringLiteral.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesStringLiteralMethod.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesStringLiteralPropertyFromProperty.executor": "Run",
+    "JUnit.GenericInvokerTest.testRetrievesUriPropertyFromProperty.executor": "Run",
     "JUnit.HostConnectionImplTest.executor": "Run",
     "JUnit.HttpResolverClientTest.executor": "Run",
     "JUnit.HttpServiceRegistryTest.executor": "Run",
@@ -73,17 +109,30 @@
     "JUnit.ListenableFutureAdapterTest (1).executor": "Run",
     "JUnit.ListenableFutureAdapterTest.cancelShouldCancelBothFutures.executor": "Run",
     "JUnit.ListenableFutureAdapterTest.executor": "Coverage",
+    "JUnit.MakerTest.executor": "Run",
+    "JUnit.MakerTest.testDelete.executor": "Run",
+    "JUnit.MappableMakerTest.executor": "Run",
+    "JUnit.MappableMakerTest.testUpsert.executor": "Run",
+    "JUnit.MappablePublisherTest.testShare.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.testLibraryPath.executor": "Run",
     "JUnit.OsLibraryPathResolverTest.testLibraryPathLinux.executor": "Run",
+    "JUnit.PublisherTest.executor": "Run",
+    "JUnit.PublisherTest.testShareWithFeedIDAndPayload.executor": "Run",
+    "JUnit.SearcherTest.testQuery.executor": "Run",
     "JUnit.SimpleIdentityImplTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken.executor": "Debug",
+    "JUnit.SparqlQueryResponseStreamObserverTest.executor": "Run",
+    "JUnit.SparqlQueryResponseStreamObserverTest.testOnErrorCalledWhenReceivedError.executor": "Run",
     "JUnit.TokenInjectorClientInterceptorTest.interceptCallAddsAuthorizationHeader.executor": "Run",
     "JUnit.TokenTimerSchedulerTest.executor": "Run",
+    "JUnit.XsdDatatypeTest.basicTypesToStringHandledWithoutUnderscore.executor": "Run",
+    "JUnit.XsdDatatypeTest.executor": "Run",
     "JUnit.java in iotics-agent-core.executor": "Run",
     "JUnit.java in iotics-identity-core (1).executor": "Run",
     "JUnit.java in iotics-identity-core.executor": "Coverage",
+    "JUnit.twins in iotics-agent-twins.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.iotics-agent-core [clean].executor": "Run",
     "Maven.iotics-agent-core [compile].executor": "Run",
@@ -135,117 +184,120 @@
       <recent name="smartrics.iotics.identity" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="smartrics.iotics.connectors.twins" />
       <recent name="smartrics.iotics.host" />
       <recent name="smartrics.iotics.identity" />
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="smartrics.iotics.identity" />
+      <recent name="smartrics.iotics.connectors.twins.annotations" />
       <recent name="smartrics.iotics.connectors.twins" />
+      <recent name="smartrics.iotics.identity" />
       <recent name="smartrics.iotics.host.grpc" />
       <recent name="smartrics.iotics.host" />
-      <recent name="smartrics.iotics.host.grpc.token" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="smartrics.iotics.connectors.twins.annotations" />
       <recent name="smartrics.iotics.host" />
       <recent name="smartrics.iotics.identity" />
       <recent name="smartrics.iotics.identity.experimental" />
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DescriberTest">
-    <configuration name="DescriberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GenericInvokerTest">
+    <configuration name="GenericInvokerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DescriberTest.testDescribeScheduledPolling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenericInvokerTest.testMethodWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
-      <option name="METHOD_NAME" value="testDescribeScheduledPolling" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
+      <option name="METHOD_NAME" value="testMethodWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DescriberTest.testDescribeWithNoParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenericInvokerTest.testParsingFeed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
-      <option name="METHOD_NAME" value="testDescribeWithNoParameters" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
+      <option name="METHOD_NAME" value="testParsingFeed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DescriberTest.testDescribeWithTwinID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenericInvokerTest.testParsingInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.DescriberTest" />
-      <option name="METHOD_NAME" value="testDescribeWithTwinID" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
+      <option name="METHOD_NAME" value="testParsingInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IdentityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-identity-core" />
+    <configuration name="GenericInvokerTest.testRetrievesFromPropAndMethodWithSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.identity.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.identity" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.IdentityTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
+      <option name="METHOD_NAME" value="testRetrievesFromPropAndMethodWithSet(java.lang.Class)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.DescriberTest" />
-      <item itemvalue="JUnit.DescriberTest.testDescribeScheduledPolling" />
-      <item itemvalue="JUnit.DescriberTest.testDescribeWithNoParameters" />
-      <item itemvalue="JUnit.DescriberTest.testDescribeWithTwinID" />
-      <item itemvalue="JUnit.IdentityTest" />
+      <item itemvalue="JUnit.GenericInvokerTest.testParsingFeed" />
+      <item itemvalue="JUnit.GenericInvokerTest.testParsingInput" />
+      <item itemvalue="JUnit.GenericInvokerTest" />
+      <item itemvalue="JUnit.GenericInvokerTest.testMethodWithException" />
+      <item itemvalue="JUnit.GenericInvokerTest.testRetrievesFromPropAndMethodWithSet" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DescriberTest" />
-        <item itemvalue="JUnit.DescriberTest.testDescribeWithNoParameters" />
-        <item itemvalue="JUnit.DescriberTest.testDescribeWithTwinID" />
-        <item itemvalue="JUnit.DescriberTest.testDescribeScheduledPolling" />
-        <item itemvalue="JUnit.IdentityTest" />
+        <item itemvalue="JUnit.GenericInvokerTest" />
+        <item itemvalue="JUnit.GenericInvokerTest.testParsingInput" />
+        <item itemvalue="JUnit.GenericInvokerTest.testParsingFeed" />
+        <item itemvalue="JUnit.GenericInvokerTest.testMethodWithException" />
+        <item itemvalue="JUnit.GenericInvokerTest.testRetrievesFromPropAndMethodWithSet" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +429,87 @@
       <option name="project" value="LOCAL" />
       <updated>1713825574918</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="porting agent twin classes">
+      <option name="closed" value="true" />
+      <created>1713827130020</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713827130020</updated>
+    </task>
+    <task id="LOCAL-00016" summary="porting agent twin classes">
+      <option name="closed" value="true" />
+      <created>1713827146423</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713827146423</updated>
+    </task>
+    <task id="LOCAL-00017" summary="porting agent twin classes">
+      <option name="closed" value="true" />
+      <created>1713827166082</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713827166082</updated>
+    </task>
+    <task id="LOCAL-00018" summary="porting agent twin classes">
+      <option name="closed" value="true" />
+      <created>1713827176452</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713827176452</updated>
+    </task>
+    <task id="LOCAL-00019" summary="porting agent twin classes">
+      <option name="closed" value="true" />
+      <created>1713827795247</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713827795247</updated>
+    </task>
+    <task id="LOCAL-00020" summary="porting agent twin classes">
+      <option name="closed" value="true" />
+      <created>1713828100993</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713828100993</updated>
+    </task>
+    <task id="LOCAL-00021" summary="finished porting of agent library with tests and documentation">
+      <option name="closed" value="true" />
+      <created>1713879762377</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713879762377</updated>
+    </task>
+    <task id="LOCAL-00022" summary="reformatted code">
+      <option name="closed" value="true" />
+      <created>1713881310957</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713881310957</updated>
+    </task>
+    <task id="LOCAL-00023" summary="reformatted code">
+      <option name="closed" value="true" />
+      <created>1713881333110</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713881333110</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added files">
+      <option name="closed" value="true" />
+      <created>1713881360281</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713881360281</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -409,7 +541,11 @@
     <MESSAGE value="extracted interface for testability" />
     <MESSAGE value="added api internalised interfaces for testability" />
     <MESSAGE value="added missing comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added missing comments" />
+    <MESSAGE value="porting agent twin classes" />
+    <MESSAGE value="finished porting of agent library with tests and documentation" />
+    <MESSAGE value="reformatted code" />
+    <MESSAGE value="added files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -436,13 +572,46 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/DescriberTest.java</url>
-          <line>105</line>
+          <line>88</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/SampleTwin.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/iotics4j$GenericInvokerTest.ic" NAME="GenericInvokerTest Coverage Results" MODIFIED="1714476607933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>smartrics.iotics.connectors.twins.annotations.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/iotics4j$ListenableFutureAdapterTest.ic" NAME="ListenableFutureAdapterTest Coverage Results" MODIFIED="1713346152487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.host.grpc.*</FILTER>
     </SUITE>

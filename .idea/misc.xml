@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.Feed" />
+      <item index="1" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.Input" />
+      <item index="2" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.LangLiteralProperty" />
+      <item index="3" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.LiteralProperty" />
+      <item index="4" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.PayloadValue" />
+      <item index="5" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.StringLiteralProperty" />
+      <item index="6" class="java.lang.String" itemvalue="smartrics.iotics.connectors.twins.annotations.UriProperty" />
+    </list>
+    <writeAnnotations>
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.StringLiteralProperty" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.UriProperty" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.LiteralProperty" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.LangLiteralProperty" />
+    </writeAnnotations>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
