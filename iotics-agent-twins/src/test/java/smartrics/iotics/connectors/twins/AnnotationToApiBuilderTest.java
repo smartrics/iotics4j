@@ -35,8 +35,8 @@ class AnnotationToApiBuilderTest {
                 .findFirst().orElseThrow().payload().getSample().getData().toStringUtf8();
         Gson gson = new Gson();
         TestPoint tp = gson.fromJson(data, TestPoint.class);
-        System.out.println(tp);
-        System.out.println(payload);
+        assertThat(tp.dcat, is(equalTo("v1")));
+        assertThat(tp.foma, is(equalTo("f1")));
     }
 
     @ParameterizedTest
