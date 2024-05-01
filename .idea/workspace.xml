@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added annotations support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestWithSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestWithSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;smartrics&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smartrics/iotics4j.git&quot;,
+    &quot;accountId&quot;: &quot;083aafd4-dda6-4e55-971d-e0265da558da&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,6 +63,8 @@
     "Application.SampleTwin.executor": "Run",
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
     "JUnit.AbstractMappingStreamObserverTest.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFailsForInvalidGeoLocation.executor": "Debug",
     "JUnit.AnnotationToApiBuilderTest.buildFailsForMultipleHostID.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFailsForMultipleLocations.executor": "Run",
@@ -218,7 +237,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in iotics-agent-twins">
+  <component name="RunManager" selected="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods">
     <configuration name="AnnotationToApiBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
@@ -234,7 +253,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnnotationToApiBuilderTest.buildFeedValueMeta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
@@ -244,13 +263,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
       <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="METHOD_NAME" value="buildFeedValueMeta" />
+      <option name="METHOD_NAME" value="buildAnnotationOnStaticMethods" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnnotationToApiBuilderTest.buildFeedValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
@@ -260,7 +279,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
       <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="METHOD_NAME" value="buildFeedValues" />
+      <option name="METHOD_NAME" value="buildAnnotationOnStaticVariables" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -291,28 +310,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValueMeta" />
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValues" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsSharePayload" />
       <item itemvalue="JUnit.java in iotics-agent-twins" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" />
         <item itemvalue="JUnit.java in iotics-agent-twins" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsSharePayload" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValues" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValueMeta" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -618,6 +630,7 @@
     <SUITE FILE_PATH="coverage/iotics4j$ListenableFutureAdapterTest.ic" NAME="ListenableFutureAdapterTest Coverage Results" MODIFIED="1713346152487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.host.grpc.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/iotics4j$java_in_iotics_agent_twins.ic" NAME="java in iotics-agent-twins Coverage Results" MODIFIED="1714569872773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/iotics4j$SimpleIdentityManagerTest.ic" NAME="SimpleIdentityManagerTest Coverage Results" MODIFIED="1713298585716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.identity.*</FILTER>
     </SUITE>

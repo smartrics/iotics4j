@@ -5,7 +5,7 @@ import smartrics.iotics.host.UriConstants;
 public class TestPoint {
     @PayloadValue(label = "theName")
     private final String value1;
-    @StringLiteralProperty(iri = UriConstants.ON_RDFS_LABEL_PROP)
+    @StringLiteralProperty(iri = UriConstants.RDFSProperty.Label)
     private String label = "myLabel";
 
     public TestPoint(String v1) {

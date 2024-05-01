@@ -27,7 +27,7 @@ public class GenericInvokerTest {
         assertThat(result.size(), is(equalTo(2)));
         List<String> values = result.stream().map(annotationData -> annotationData.annotatedElementValue().toString()).toList();
         assertThat(values, contains("myFeedLabelProp", "myFeedLabelMethod"));
-        result.forEach(data -> assertThat(data.annotationKvp().get("iri"), is(equalTo(UriConstants.ON_RDFS_LABEL_PROP))));
+        result.forEach(data -> assertThat(data.annotationKvp().get("iri"), is(equalTo(UriConstants.RDFSProperty.Label))));
 
         result.stream().filter(annotationData -> annotationData.annotation() instanceof LiteralProperty)
                 .forEach(data -> assertThat(data.annotationKvp().get("dataType"), is(equalTo(XsdDatatype.decimal))));
@@ -46,7 +46,7 @@ public class GenericInvokerTest {
         assertThat(result.size(), is(equalTo(2)));
         List<String> values = result.stream().flatMap((Function<AnnotationData, Stream<String>>) annotationData -> ((Set<String>) annotationData.annotatedElementValue()).stream()).toList();
         assertThat(values, containsInAnyOrder("uri:1", "uri:2", "uri:3", "uri:4"));
-        result.forEach(data -> assertThat(data.annotationKvp().get("iri"), is(equalTo(UriConstants.ON_RDF_TYPE_PROP))));
+        result.forEach(data -> assertThat(data.annotationKvp().get("iri"), is(equalTo(UriConstants.RDFProperty.Type))));
     }
 
     @Test
@@ -59,7 +59,7 @@ public class GenericInvokerTest {
     void testMethodWithException() {
 
         class TestWithException {
-            @StringLiteralProperty(iri = UriConstants.ON_RDFS_LABEL_PROP)
+            @StringLiteralProperty(iri = UriConstants.RDFSProperty.Label)
             String method() {
                 throw new RuntimeException();
             }

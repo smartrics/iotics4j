@@ -2,6 +2,7 @@ package smartrics.iotics.connectors.twins;
 
 import com.google.gson.Gson;
 import com.iotics.api.*;
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -112,6 +113,40 @@ class AnnotationToApiBuilderTest {
         assertTrue(prop.hasLangLiteralValue());
         assertThat(prop.getKey(), is(equalTo("someIri")));
         assertThat(prop.getLangLiteralValue().getValue(), is(equalTo("prop3")));
+    }
+
+    @Test
+    void buildAnnotationOnStaticVariables() {
+        TestInterface instance = newTestInterfaceWithStatic();
+        List<AnnotationData> data = GenericInvoker.collectAnnotatedMemberValues(instance, StringLiteralProperty.class);
+        Property prop = annBuilder.buildProperty(data.getFirst());
+        assertTrue(prop.hasStringLiteralValue());
+        assertThat(prop.getKey(), is(equalTo("http://blurb.com/foo")));
+        assertThat(prop.getStringLiteralValue().getValue(), is(equalTo("foo")));
+    }
+
+    @Test
+    void buildAnnotationOnStaticMethods() {
+        TestInterface instance = newTestInterfaceWithStatic();
+        List<AnnotationData> data = GenericInvoker.collectAnnotatedMemberValues(instance, LiteralProperty.class);
+        Property prop = annBuilder.buildProperty(data.getFirst());
+        assertTrue(prop.hasLiteralValue());
+        assertThat(prop.getKey(), is(equalTo("http://blurb.com/bar")));
+        assertThat(prop.getLiteralValue().getValue(), is(equalTo("false")));
+        assertThat(prop.getLiteralValue().getDataType(), is(equalTo("boolean")));
+    }
+
+    private static @NotNull TestInterface newTestInterfaceWithStatic() {
+        return new TestInterface() {
+            @StringLiteralProperty(iri = "http://blurb.com/foo")
+            public static String something = "foo";
+
+            @LiteralProperty(iri = "http://blurb.com/bar", dataType = XsdDatatype.boolean_)
+            public static String method() {
+                return "false";
+            }
+
+        };
     }
 
     @Test
