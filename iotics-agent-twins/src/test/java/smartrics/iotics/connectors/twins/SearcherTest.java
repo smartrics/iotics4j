@@ -26,12 +26,6 @@ class SearcherTest {
 
     private Searcher searcher;
 
-    private static class ConcreteSearcher extends BaseTwin implements Searcher {
-        ConcreteSearcher(IoticsApi api) {
-            super(api);
-        }
-    }
-
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -47,5 +41,11 @@ class SearcherTest {
         verify(metaAPI).sparqlQuery(any(SparqlQueryRequest.class), responseCaptor.capture());
         assertEquals(responseCaptor.getValue().getClass(), SparqlQueryResponseStreamObserver.class);
 
+    }
+
+    private static class ConcreteSearcher extends BaseTwin implements Searcher {
+        ConcreteSearcher(IoticsApi api) {
+            super(api);
+        }
     }
 }

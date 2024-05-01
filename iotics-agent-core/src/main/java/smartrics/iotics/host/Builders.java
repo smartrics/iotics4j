@@ -2,6 +2,7 @@ package smartrics.iotics.host;
 
 import com.iotics.api.Headers;
 import org.bitcoinj.core.Base58;
+import smartrics.iotics.identity.Identity;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -16,14 +17,12 @@ public class Builders {
      * Creates a new {@link Headers.Builder} instance with a specific client application ID and a
      * transaction reference.
      *
-     * @param did The decentralized identifier (DID) that will be set as the client application ID.
+     * @param identity The decentralized identity (DID) that will be used to generate the client application ID and references.
      * @return A {@link Headers.Builder} initialized with a transaction reference and client application ID.
-     *         The transaction reference is generated using the {@link #sUUID()} method prefixed with "txRef-".
+     * The transaction reference is generated using the {@link #sUUID()} method prefixed with "txRef-".
      */
-    public static Headers.Builder newHeadersBuilder(String did) {
-        return Headers.newBuilder()
-                .addTransactionRef("txRef-" + sUUID())
-                .setClientAppId(did);
+    public static Headers.Builder newHeadersBuilder(Identity identity) {
+        return Headers.newBuilder().setClientRef(identity.keyName() + "_" + sUUID()).addTransactionRef("txRef-" + sUUID()).setClientAppId(identity.did());
     }
 
     /**
@@ -33,7 +32,7 @@ public class Builders {
      *
      * @return A unique Base58-encoded string representing the generated identifier.
      * @throws IllegalStateException If there is an error initializing the secure random generator
-     *         or during the generation process.
+     *                               or during the generation process.
      */
     public static String sUUID() {
         try {

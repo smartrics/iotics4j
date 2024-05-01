@@ -1,2 +1,37 @@
-package smartrics.iotics.connectors.twins.annotations;public class TestWithSet {
+package smartrics.iotics.connectors.twins.annotations;
+
+import com.google.common.collect.Sets;
+import smartrics.iotics.host.UriConstants;
+
+import java.util.Set;
+
+public class TestWithSet {
+    @UriProperty(iri = UriConstants.ON_RDF_TYPE_PROP)
+    private Set<String> uri1 = Sets.newHashSet("uri:1", "uri:2");
+    @StringLiteralProperty(iri = UriConstants.ON_RDF_TYPE_PROP)
+    private Set<String> uri2 = Sets.newHashSet("uri:1", "uri:2");
+    @LangLiteralProperty(iri = UriConstants.ON_RDF_TYPE_PROP)
+    private Set<String> uri3 = Sets.newHashSet("uri:1", "uri:2");
+    @LiteralProperty(dataType = XsdDatatype.long_, iri = UriConstants.ON_RDF_TYPE_PROP)
+    private Set<String> uri4 = Sets.newHashSet("uri:1", "uri:2");
+
+    @UriProperty(iri = UriConstants.ON_RDF_TYPE_PROP)
+    public Set<String> uri1() {
+        return Sets.newHashSet("uri:3", "uri:4");
+    }
+
+    @StringLiteralProperty(iri = UriConstants.ON_RDF_TYPE_PROP)
+    public Set<String> uri2() {
+        return Sets.newHashSet("uri:3", "uri:4");
+    }
+
+    @LangLiteralProperty(iri = UriConstants.ON_RDF_TYPE_PROP)
+    public Set<String> uri3() {
+        return Sets.newHashSet("uri:3", "uri:4");
+    }
+
+    @LiteralProperty(dataType = XsdDatatype.long_, iri = UriConstants.ON_RDF_TYPE_PROP)
+    public Set<String> uri4() {
+        return Sets.newHashSet("uri:3", "uri:4");
+    }
 }

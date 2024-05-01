@@ -63,7 +63,7 @@ public interface Publisher extends Identifiable, ApiUser {
     @NotNull
     default ShareFeedDataRequest newRequest(FeedID feedID, String payload) {
         return ShareFeedDataRequest.newBuilder()
-                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity().did()).build())
+                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity()).build())
                 .setPayload(ShareFeedDataRequest.Payload.newBuilder()
                         .setSample(FeedData.newBuilder()
                                 .setData(ByteString.copyFrom(payload.getBytes(StandardCharsets.UTF_8)))

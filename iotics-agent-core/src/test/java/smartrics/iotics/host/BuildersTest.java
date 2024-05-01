@@ -2,6 +2,8 @@ package smartrics.iotics.host;
 
 import com.iotics.api.Headers;
 import org.junit.jupiter.api.Test;
+import smartrics.iotics.identity.Identity;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.HashSet;
@@ -11,12 +13,13 @@ class BuildersTest {
 
     @Test
     void testNewHeadersBuilder() {
-        String did = "dummyDID";
-        Headers.Builder builder = Builders.newHeadersBuilder(did);
+        Identity id = new Identity("keyName", "name", "did");
+        Headers.Builder builder = Builders.newHeadersBuilder(id);
 
         assertNotNull(builder);
-        assertEquals(did, builder.getClientAppId());
+        assertEquals("did", builder.getClientAppId());
         assertTrue(builder.getTransactionRef(0).startsWith("txRef-"));
+        assertTrue(builder.getClientRef().startsWith("keyName"));
     }
 
     @Test

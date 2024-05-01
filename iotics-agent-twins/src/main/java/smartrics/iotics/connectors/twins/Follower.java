@@ -26,27 +26,13 @@ import java.util.concurrent.CompletableFuture;
 public interface Follower extends Identifiable, ApiUser {
 
     /**
-     * Configuration settings for retry behavior when following feeds, including initial delay,
-     * jitter to prevent synchronization, backoff delay, and maximum backoff delay.
-     */
-    record RetryConf(Duration delay, Duration jitter, Duration backoffDelay, Duration backoffMaxDelay) {
-    }
-
-    /**
      * Default retry policy for following operations, tailored to handle specific gRPC status exceptions
      * and configured with predefined delay and jitter.
      */
-    RetryPolicyBuilder<Object> DEF_RETRY_POLICY_FOLLOW_BUILDER = RetryPolicy.builder()
-            .handle(StatusRuntimeException.class)
-            .handleIf(e -> {
-                StatusRuntimeException sre = (StatusRuntimeException) e;
-                return sre.getStatus() == Status.DEADLINE_EXCEEDED
-                        || sre.getStatus() == Status.UNAUTHENTICATED
-                        || sre.getStatus() == Status.UNAVAILABLE;
-            })
-            .withDelay(Duration.ofSeconds(10))
-            .withMaxRetries(-1)
-            .withJitter(Duration.ofMillis(3000));
+    RetryPolicyBuilder<Object> DEF_RETRY_POLICY_FOLLOW_BUILDER = RetryPolicy.builder().handle(StatusRuntimeException.class).handleIf(e -> {
+        StatusRuntimeException sre = (StatusRuntimeException) e;
+        return sre.getStatus() == Status.DEADLINE_EXCEEDED || sre.getStatus() == Status.UNAUTHENTICATED || sre.getStatus() == Status.UNAVAILABLE;
+    }).withDelay(Duration.ofSeconds(10)).withMaxRetries(-1).withJitter(Duration.ofMillis(3000));
 
     /**
      * Begins following a feed identified by a FeedID, using a blocking API call to fetch
@@ -81,10 +67,7 @@ public interface Follower extends Identifiable, ApiUser {
      * @param observer  the observer to handle responses and errors
      */
     default void follow(FeedID feedID, RetryConf retryConf, StreamObserver<FetchInterestResponse> observer) {
-        Failsafe.with(DEF_RETRY_POLICY_FOLLOW_BUILDER
-                .withJitter(retryConf.jitter)
-                .withDelay(retryConf.delay)
-                .build()).runAsync(() -> {
+        Failsafe.with(DEF_RETRY_POLICY_FOLLOW_BUILDER.withJitter(retryConf.jitter).withDelay(retryConf.delay).build()).runAsync(() -> {
             CompletableFuture<Void> result = new CompletableFuture<>();
             followNoRetry(feedID, new StreamObserver<>() {
                 @Override
@@ -136,18 +119,16 @@ public interface Follower extends Identifiable, ApiUser {
     private FetchInterestRequest newRequest(FeedID feedId) {
         try {
             Identity agentIdentity = getAgentIdentity();
-            return FetchInterestRequest.newBuilder()
-                    .setHeaders(Builders.newHeadersBuilder(agentIdentity.did()).build())
-                    .setFetchLastStored(BoolValue.newBuilder().setValue(true).build())
-                    .setArgs(FetchInterestRequest.Arguments.newBuilder()
-                            .setInterest(Interest.newBuilder()
-                                    .setFollowerTwinId(TwinID.newBuilder().setId(getMyIdentity().did()))
-                                    .setFollowedFeedId(feedId)
-                                    .build())
-                            .build())
-                    .build();
+            return FetchInterestRequest.newBuilder().setHeaders(Builders.newHeadersBuilder(agentIdentity).build()).setFetchLastStored(BoolValue.newBuilder().setValue(true).build()).setArgs(FetchInterestRequest.Arguments.newBuilder().setInterest(Interest.newBuilder().setFollowerTwinId(TwinID.newBuilder().setId(getMyIdentity().did())).setFollowedFeedId(feedId).build()).build()).build();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Configuration settings for retry behavior when following feeds, including initial delay,
+     * jitter to prevent synchronization, backoff delay, and maximum backoff delay.
+     */
+    record RetryConf(Duration delay, Duration jitter, Duration backoffDelay, Duration backoffMaxDelay) {
     }
 }

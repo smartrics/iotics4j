@@ -15,6 +15,11 @@
       <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.UriProperty" />
       <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.LiteralProperty" />
       <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.LangLiteralProperty" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.TwinId" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.Location" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.Identifier" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.HostIdentifier" />
+      <writeAnnotation name="smartrics.iotics.connectors.twins.annotations.PayloadValue" />
     </writeAnnotations>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />

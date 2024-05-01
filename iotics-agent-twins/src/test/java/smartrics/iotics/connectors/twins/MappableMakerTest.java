@@ -74,5 +74,6 @@ class MappableMakerTest {
         public Mapper getMapper() {
             return MappableMakerTest.this.realMapper;
         }
+
     }
 }

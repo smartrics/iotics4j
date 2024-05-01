@@ -2,7 +2,7 @@ package smartrics.iotics.connectors.twins.annotations;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class XsdDatatypeTest {
 

@@ -67,7 +67,7 @@ public interface Describer extends Identifiable, ApiUser {
      */
     default ListenableFuture<DescribeTwinResponse> describe(TwinID twinID) {
         return ioticsApi().twinAPIFuture().describeTwin(DescribeTwinRequest.newBuilder()
-                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity().did())
+                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity())
                         .build())
                 .setArgs(DescribeTwinRequest.Arguments.newBuilder()
                         .setTwinId(TwinID.newBuilder()

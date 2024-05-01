@@ -9,9 +9,11 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.FIELD})
 public @interface PayloadValue {
 
-    String id();
+    String label() default "";
 
     String unit() default "";
 
     String dataType() default "";
+
+    String comment() default "";
 }

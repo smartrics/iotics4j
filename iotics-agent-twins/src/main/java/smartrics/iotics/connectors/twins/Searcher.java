@@ -20,11 +20,11 @@ public interface Searcher extends Identifiable, ApiUser {
      * aggregated result back once all parts have been received and concatenated.
      *
      * @param payload The payload for the SPARQL query request.
-     * @param result  The observer to handle responses or errors from the query operation.
+     * @param delegate  The observer to handle responses or errors from the query operation.
      */
     default void query(SparqlQueryRequest.Payload payload, StreamObserver<String> delegate) {
         SparqlQueryRequest request = SparqlQueryRequest.newBuilder()
-                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity().did()).build())
+                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity()).build())
                 .setPayload(payload)
                 .build();
 
@@ -63,7 +63,7 @@ public interface Searcher extends Identifiable, ApiUser {
             }
         };
         SearchRequest request = SearchRequest.newBuilder()
-                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity().did()).build())
+                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity()).build())
                 .setPayload(searchRequestPayload)
                 .build();
         ioticsApi().searchAPI().synchronousSearch(request, obs);

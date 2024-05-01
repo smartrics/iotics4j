@@ -4,25 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added files">
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/AnnotationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Feed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/GenericInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostAllowList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostMetadataAllowList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/LangLiteralProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/LiteralProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/StringLiteralProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/UriProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/XsdDatatype.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/XsdDatatypeTest.java" afterDir="false" />
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added annotations support">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/Builders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/BuildersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/test/java/smartrics/iotics/host/BuildersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Describer.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Describer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Maker.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Maker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/SearchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/SearchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Searcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/AnnotationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/AnnotationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/GenericInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/GenericInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/HostIdentifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Identifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/MappableMakerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/MappableMakerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/SearcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/SearcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestWithSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestWithSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/XsdDatatypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/XsdDatatypeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +70,32 @@
     "Application.SampleTwin.executor": "Run",
     "JUnit.AbstractDelegatingStreamObserverTest.executor": "Run",
     "JUnit.AbstractMappingStreamObserverTest.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFailsForInvalidGeoLocation.executor": "Debug",
+    "JUnit.AnnotationToApiBuilderTest.buildFailsForMultipleHostID.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFailsForMultipleLocations.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFailsForMultipleTwinID.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFailsForNoTwinID.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFeed.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFeedValueMeta.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFeedValues.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFeedValuesWithLabelMatchingTheFieldOrAttributeName.executor": "Debug",
+    "JUnit.AnnotationToApiBuilderTest.buildGeoLocation.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildInput.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildInputsByInstance.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildLiteralProperty.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildStringLiteralProperty.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildTwinID.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildUriProperty.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildWithMissingHostIdentifier.executor": "Debug",
+    "JUnit.AnnotationToApiBuilderTest.buildWithoutLocation.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildsSharePayload.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildsUpsertRequestPayload (1).executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildsUpsertRequestPayload.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildsUpsertRequestPayloadWithNullID.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.executor": "Coverage",
+    "JUnit.AnnotationToApiBuilderTest.throwsOnInvalidProperty.executor": "Run",
     "JUnit.BuildersTest.executor": "Run",
+    "JUnit.BuildersTest.testNewHeadersBuilder.executor": "Run",
     "JUnit.DescriberTest.executor": "Run",
     "JUnit.DescriberTest.testDescribeScheduledPolling.executor": "Run",
     "JUnit.DescriberTest.testDescribeWithNoParameters.executor": "Run",
@@ -130,6 +163,7 @@
     "JUnit.XsdDatatypeTest.basicTypesToStringHandledWithoutUnderscore.executor": "Run",
     "JUnit.XsdDatatypeTest.executor": "Run",
     "JUnit.java in iotics-agent-core.executor": "Run",
+    "JUnit.java in iotics-agent-twins.executor": "Run",
     "JUnit.java in iotics-identity-core (1).executor": "Run",
     "JUnit.java in iotics-identity-core.executor": "Coverage",
     "JUnit.twins in iotics-agent-twins.executor": "Run",
@@ -161,6 +195,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="smartrics.iotics.connectors.twins" />
       <recent name="smartrics.iotics.host" />
       <recent name="smartrics.iotics.host.grpc" />
     </key>
@@ -189,9 +224,12 @@
       <recent name="smartrics.iotics.identity" />
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
+    <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="smartrics.iotics.connectors.twins.annotations" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="smartrics.iotics.connectors.twins" />
+      <recent name="smartrics.iotics.connectors.twins.annotations" />
       <recent name="smartrics.iotics.identity" />
       <recent name="smartrics.iotics.host.grpc" />
       <recent name="smartrics.iotics.host" />
@@ -204,100 +242,100 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GenericInvokerTest">
-    <configuration name="GenericInvokerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AnnotationToApiBuilderTest">
+    <configuration name="AnnotationToApiBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericInvokerTest.testMethodWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildFeedValueMeta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
-      <option name="METHOD_NAME" value="testMethodWithException" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
+      <option name="METHOD_NAME" value="buildFeedValueMeta" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericInvokerTest.testParsingFeed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildFeedValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
-      <option name="METHOD_NAME" value="testParsingFeed" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
+      <option name="METHOD_NAME" value="buildFeedValues" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericInvokerTest.testParsingInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildFeedValuesWithLabelMatchingTheFieldOrAttributeName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
-      <option name="METHOD_NAME" value="testParsingInput" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
+      <option name="METHOD_NAME" value="buildFeedValuesWithLabelMatchingTheFieldOrAttributeName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericInvokerTest.testRetrievesFromPropAndMethodWithSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildsSharePayload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.annotations.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins.annotations" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.annotations.GenericInvokerTest" />
-      <option name="METHOD_NAME" value="testRetrievesFromPropAndMethodWithSet(java.lang.Class)" />
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
+      <option name="METHOD_NAME" value="buildsSharePayload" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.GenericInvokerTest.testParsingFeed" />
-      <item itemvalue="JUnit.GenericInvokerTest.testParsingInput" />
-      <item itemvalue="JUnit.GenericInvokerTest" />
-      <item itemvalue="JUnit.GenericInvokerTest.testMethodWithException" />
-      <item itemvalue="JUnit.GenericInvokerTest.testRetrievesFromPropAndMethodWithSet" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValueMeta" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValues" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValuesWithLabelMatchingTheFieldOrAttributeName" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsSharePayload" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GenericInvokerTest" />
-        <item itemvalue="JUnit.GenericInvokerTest.testParsingInput" />
-        <item itemvalue="JUnit.GenericInvokerTest.testParsingFeed" />
-        <item itemvalue="JUnit.GenericInvokerTest.testMethodWithException" />
-        <item itemvalue="JUnit.GenericInvokerTest.testRetrievesFromPropAndMethodWithSet" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValues" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValueMeta" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedValuesWithLabelMatchingTheFieldOrAttributeName" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsSharePayload" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713881360281</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added annotations support">
+      <option name="closed" value="true" />
+      <created>1714484286040</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714484286040</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -545,7 +591,8 @@
     <MESSAGE value="finished porting of agent library with tests and documentation" />
     <MESSAGE value="reformatted code" />
     <MESSAGE value="added files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added files" />
+    <MESSAGE value="added annotations support" />
+    <option name="LAST_COMMIT_MESSAGE" value="added annotations support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,39 +618,27 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/DescriberTest.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
-          <line>72</line>
+          <line>58</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
-          <line>88</line>
+          <line>71</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
-          <line>70</line>
+          <line>56</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
-          <line>138</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
-          <line>149</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/SampleTwin.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java</url>
+          <line>69</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -620,6 +655,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/iotics4j$java_in_iotics_agent_core.ic" NAME="java in iotics-agent-core Coverage Results" MODIFIED="1713362685269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/iotics4j$java_in_iotics_identity_core.ic" NAME="java in iotics-identity-core Coverage Results" MODIFIED="1713298800478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/iotics4j$AnnotationToApiBuilderTest.ic" NAME="AnnotationToApiBuilderTest Coverage Results" MODIFIED="1714569273788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>smartrics.iotics.connectors.twins.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/iotics4j$AbstractMappingStreamObserverTest.ic" NAME="AbstractMappingStreamObserverTest Coverage Results" MODIFIED="1713345938236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>smartrics.iotics.host.grpc.*</FILTER>
     </SUITE>
