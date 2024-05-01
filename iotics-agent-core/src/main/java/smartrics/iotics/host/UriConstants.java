@@ -5,69 +5,81 @@ package smartrics.iotics.host;
  */
 public interface UriConstants {
 
-    // IOTICS-specific URIs
-    /**
-     * URI for specifying the property that defines a host allow list in IOTICS.
-     */
-    String IOTICS_PUBLIC_ALLOW_LIST_PROP = "http://data.iotics.com/public#hostAllowList";
+    interface IOTICSProperties {
 
-    /**
-     * URI that represents a value indicating all hosts are allowed; used in conjunction with
-     * {@link #IOTICS_PUBLIC_ALLOW_LIST_PROP}.
-     */
-    String IOTICS_PUBLIC_ALLOW_ALL_VALUE = "http://data.iotics.com/public#allHosts";
+        String prefix = "http://data.iotics.com/public#";
 
-    // Semantic web (RDF, RDFS, OWL) URIs
-    /**
-     * Base URI for RDF schema vocabulary.
-     */
-    String ON_RDFS = "http://www.w3.org/2000/01/rdf-schema#";
+        String HostAllowListName = prefix + "hostAllowList";
 
-    /**
-     * Base URI for RDF syntax namespace.
-     */
-    String ON_RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+        enum HostAllowListValues {
+            /**
+             * URI that represents a value indicating all hosts are allowed; used in conjunction with
+             */
+            ALL(prefix + "allHosts"),
+            /**
+             * URI that represents a value indicating no hosts are allowed; used in conjunction with
+             */
+            NONE(prefix + "noHosts");
 
-    /**
-     * Base URI for OWL (Web Ontology Language).
-     */
-    String ON_OWL = "http://www.w3.org/2002/07/owl#";
+            private final String value;
 
-    // Composed URIs for properties and types using the base URIs
-    /**
-     * URI for the RDF 'type' property.
-     */
-    String ON_RDF_TYPE_PROP = ON_RDF + "type";
+            @Override
+            public String toString() {
+                return value;
+            }
 
-    /**
-     * URI for the RDFS 'label' property, typically used to provide a human-readable version of a resource's name.
-     */
-    String ON_RDFS_LABEL_PROP = ON_RDFS + "label";
+            HostAllowListValues(String v) {
+                this.value = v;
+            }
+        }
+    }
 
-    /**
-     * URI for the RDFS 'comment' property, used to provide a description of a resource.
-     */
-    String ON_RDFS_COMMENT_PROP = ON_RDFS + "comment";
+    interface RDFSProperty {
+        /**
+         * Base URI for RDF schema vocabulary.
+         */
+        String prefix = "http://www.w3.org/2000/01/rdf-schema#";
 
-    /**
-     * URI representing an OWL Class type.
-     */
-    String ON_OWL_CLASS_VALUE = ON_OWL + "Class";
+        /**
+         * URI for the RDFS 'label' property, typically used to provide a human-readable version of a resource's name.
+         */
+        String Label = prefix + "label";
 
-    /**
-     * URI representing an RDFS Class type, generally used to define classes in RDF Schema.
-     */
-    String ON_RDFS_CLASS_VALUE = ON_RDFS + "Class";
+        /**
+         * URI for the RDFS 'comment' property, used to provide a description of a resource.
+         */
+        String Comment = prefix + "comment";
 
-    // Custom search URIs specific to IOTICS data
-    /**
-     * URI for a custom property used to specify a search query in IOTICS.
-     */
-    String IOTICS_CUSTOM_SEARCH_VALUE_PROP = "http://data.iotics.com/ont/searchQuery";
+        /**
+         * URI representing an RDFS Class type, generally used to define classes in RDF Schema.
+         */
+        String Class = prefix + "Class";
 
-    /**
-     * URI for a custom property used to specify the type of a search in IOTICS.
-     */
-    String IOTICS_CUSTOM_SEARCH_TYPE_PROP = "http://data.iotics.com/ont/searchType";
+
+    }
+    interface RDFProperty {
+        /**
+         * Base URI for RDF schema vocabulary.
+         */
+        String prefix = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+
+        /**
+         * URI for the RDF 'type' property.
+         */
+        String Type = prefix + "type";
+
+    }
+
+    interface OWLProperty {
+        /**
+         * Base URI for OWL schema vocabulary.
+         */
+        String prefix = "http://www.w3.org/2002/07/owl#";
+
+        /**
+         * URI representing an OWL Class type.
+         */
+        String Class = prefix + "Class";
+    }
 }
 
