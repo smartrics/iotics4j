@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added annotations support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/UriConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Feed.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/Feed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/GenericInvokerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestWithSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/annotations/TestWithSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +68,7 @@
     "JUnit.AnnotationToApiBuilderTest.buildFailsForMultipleTwinID.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFailsForNoTwinID.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFeed.executor": "Run",
+    "JUnit.AnnotationToApiBuilderTest.buildFeedCheckStoreLast.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFeedValueMeta.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFeedValues.executor": "Run",
     "JUnit.AnnotationToApiBuilderTest.buildFeedValuesWithLabelMatchingTheFieldOrAttributeName.executor": "Debug",
@@ -237,22 +235,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods">
-    <configuration name="AnnotationToApiBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-twins" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AnnotationToApiBuilderTest.buildFeed">
     <configuration name="AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
@@ -285,7 +268,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnnotationToApiBuilderTest.buildsSharePayload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnnotationToApiBuilderTest.buildFeed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
@@ -295,7 +278,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
       <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="METHOD_NAME" value="buildsSharePayload" />
+      <option name="METHOD_NAME" value="buildFeed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnnotationToApiBuilderTest.buildFeedCheckStoreLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
+      <option name="METHOD_NAME" value="buildFeedCheckStoreLast" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -310,19 +309,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeed" />
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedCheckStoreLast" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" />
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsSharePayload" />
       <item itemvalue="JUnit.java in iotics-agent-twins" />
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeed" />
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedCheckStoreLast" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" />
         <item itemvalue="JUnit.java in iotics-agent-twins" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsSharePayload" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
       </list>
     </recent_temporary>
   </component>

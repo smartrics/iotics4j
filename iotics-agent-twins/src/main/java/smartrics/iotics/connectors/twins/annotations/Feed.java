@@ -9,4 +9,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.FIELD})
 public @interface Feed {
     String id();
+    boolean storeLast() default true;
 }

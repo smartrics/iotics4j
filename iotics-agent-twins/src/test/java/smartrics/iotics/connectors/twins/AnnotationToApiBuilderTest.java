@@ -156,12 +156,22 @@ class AnnotationToApiBuilderTest {
     }
 
     @Test
+    void buildFeedCheckStoreLast() {
+        List<AnnotationData> data = GenericInvoker.collectAnnotatedMemberValues(new TestClass(), Feed.class);
+
+        List<UpsertFeedWithMeta> feeds = data.stream().map(annBuilder::buildFeed).toList();
+        UpsertFeedWithMeta feed = feeds.stream().filter(p -> p.getId().equals("myOtherFeed")).findFirst().orElseThrow();
+        assertThat(feed.getStoreLast(), is(equalTo(false))); // default
+    }
+
+    @Test
     void buildFeed() {
         List<AnnotationData> data = GenericInvoker.collectAnnotatedMemberValues(new TestClass(), Feed.class);
 
         List<UpsertFeedWithMeta> feeds = data.stream().map(annBuilder::buildFeed).toList();
         UpsertFeedWithMeta feed = feeds.stream().filter(p -> p.getId().equals("myFeed")).findFirst().orElseThrow();
         assertThat(feed.getId(), is(equalTo("myFeed")));
+        assertThat(feed.getStoreLast(), is(equalTo(true))); // default
         assertThat(feed.getPropertiesList().size(), is(equalTo(2)));
 
         List<String> propKeys = feed.getPropertiesList().stream().map(Property::getKey).toList();
@@ -390,7 +400,7 @@ class AnnotationToApiBuilderTest {
             return new TestPoint("v1", "f1");
         }
 
-        @Feed(id = "myOtherFeed")
+        @Feed(id = "myOtherFeed", storeLast = false)
         Test2Point myOtherFeed() {
             return new Test2Point("v1");
         }

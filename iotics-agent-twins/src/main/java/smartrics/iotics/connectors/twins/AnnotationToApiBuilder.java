@@ -174,6 +174,9 @@ class AnnotationToApiBuilder {
         UpsertFeedWithMeta.Builder builder = UpsertFeedWithMeta.newBuilder();
         builder.setId(data.annotationKvp().get("id").toString());
 
+        boolean storeLast = Boolean.parseBoolean(data.annotationKvp().get("storeLast").toString());
+        builder.setStoreLast(storeLast);
+
         List<Property> allProps = buildProperties(data.annotatedElementValue());
         builder.addAllProperties(allProps);
 
