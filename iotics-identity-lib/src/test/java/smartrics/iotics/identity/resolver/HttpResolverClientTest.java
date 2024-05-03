@@ -64,18 +64,18 @@ public class HttpResolverClientTest {
     @Test
     void testDiscoverWithNullDID() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> client.discover(null));
-        assertEquals("invalid input string", exception.getMessage());
+        assertEquals("Invalid input string", exception.getMessage());
     }
 
     @Test
     void testDiscoverWithBlankDID() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> client.discover(" "));
-        assertEquals("invalid input string", exception.getMessage());
+        assertEquals("Invalid input string", exception.getMessage());
     }
 
     @Test
     void testDiscoverWithInvalidDID() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> client.discover("::"));
-        assertEquals("invalid input did", exception.getMessage());
+        assertEquals("Invalid input DID", exception.getMessage());
     }
 }

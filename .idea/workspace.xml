@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added annotations support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/experimental/JWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/experimental/JWT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/DocumentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/DocumentResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/HttpResolverClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/HttpResolverClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/Resolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/Resolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/ResolverClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/ResolverClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/SearchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/SearchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/go/StringResultTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/go/StringResultTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +150,7 @@
     "JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken.executor": "Debug",
     "JUnit.SparqlQueryResponseStreamObserverTest.executor": "Run",
     "JUnit.SparqlQueryResponseStreamObserverTest.testOnErrorCalledWhenReceivedError.executor": "Run",
+    "JUnit.StringResultTest.executor": "Run",
     "JUnit.TokenInjectorClientInterceptorTest.interceptCallAddsAuthorizationHeader.executor": "Run",
     "JUnit.TokenTimerSchedulerTest.executor": "Run",
     "JUnit.XsdDatatypeTest.basicTypesToStringHandledWithoutUnderscore.executor": "Run",
@@ -237,7 +235,15 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnnotationToApiBuilderTest.buildFeed">
+  <component name="RunManager" selected="JUnit.All in iotics-identity-lib">
+    <configuration name="All in iotics-identity-lib" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-identity-lib" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-agent-twins" />
       <extension name="coverage">
@@ -249,22 +255,6 @@
       <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
       <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
       <option name="METHOD_NAME" value="buildAnnotationOnStaticMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-twins" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="METHOD_NAME" value="buildAnnotationOnStaticVariables" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,28 +292,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in iotics-agent-twins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-twins" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/iotics-agent-twins/src/test/java" />
+    <configuration name="StringResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-identity-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.identity.go.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.identity.go" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.identity.go.StringResultTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.All in iotics-identity-lib" />
+      <item itemvalue="JUnit.StringResultTest" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeed" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedCheckStoreLast" />
       <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" />
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" />
-      <item itemvalue="JUnit.java in iotics-agent-twins" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in iotics-identity-lib" />
+        <item itemvalue="JUnit.StringResultTest" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeed" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildFeedCheckStoreLast" />
         <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticMethods" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildAnnotationOnStaticVariables" />
-        <item itemvalue="JUnit.java in iotics-agent-twins" />
       </list>
     </recent_temporary>
   </component>
@@ -580,12 +577,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java</url>
-          <line>54</line>
+          <line>51</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-identity-core/src/test/java/smartrics/iotics/identity/SimpleIdentityManagerTest.java</url>
-          <line>96</line>
+          <line>93</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

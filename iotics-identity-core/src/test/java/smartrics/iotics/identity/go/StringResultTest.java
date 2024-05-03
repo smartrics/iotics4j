@@ -34,7 +34,7 @@ public class StringResultTest {
 
         String expectedToString = "StringResult{" +
                 "value='" + expectedValue + '\'' +
-                ", r1='" + expectedErr + '\'' +
+                ", err='" + expectedErr + '\'' +
                 '}';
         assertEquals(expectedToString, result.toString(), "toString does not match");
     }
