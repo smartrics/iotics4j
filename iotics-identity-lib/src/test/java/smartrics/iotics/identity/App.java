@@ -14,7 +14,8 @@ public class App {
     static Identity agentIdentity = new Identity("aKey1", "#app1", "did:iotics:iotJxn2AHBkaFXKkBymbFYcVokGhLShLtUf1");
 
     public static void main(String[] args) {
-        OsLibraryPathResolver pathResolver = new OsLibraryPathResolver() {};
+        OsLibraryPathResolver pathResolver = new OsLibraryPathResolver() {
+        };
         SdkApi api = new JnaSdkApiInitialiser("./lib", pathResolver).get();
         token(api);
         // delegation(api);

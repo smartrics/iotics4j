@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class JWTTest {
 
@@ -15,11 +16,11 @@ class JWTTest {
 
         Gson gson = new Gson();
 
-        Map<?,?> header = gson.fromJson(jwt.header(), Map.class);
+        Map<?, ?> header = gson.fromJson(jwt.header(), Map.class);
         assertTrue(header.containsKey("alg"));
         assertTrue(header.containsKey("typ"));
 
-        Map<?,?> payload = gson.fromJson(jwt.payload(), Map.class);
+        Map<?, ?> payload = gson.fromJson(jwt.payload(), Map.class);
         assertTrue(payload.containsKey("sub"));
         assertTrue(payload.containsKey("exp"));
         assertTrue(payload.containsKey("aud"));

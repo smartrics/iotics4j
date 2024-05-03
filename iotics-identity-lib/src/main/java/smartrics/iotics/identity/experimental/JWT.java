@@ -9,8 +9,18 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.TimeZone;
 
+/**
+ * Represents a JSON Web Token (JWT) consisting of header, payload, and signature components.
+ */
 public record JWT(String header, String payload, String signature) {
 
+    /**
+     * Parses a JWT token string into a JWT object.
+     *
+     * @param token The JWT token string to parse.
+     * @return The parsed JWT object.
+     * @throws IllegalArgumentException If the token is invalid.
+     */
     public static JWT parse(String token) {
         String[] chunks = token.split("\\.");
         Base64.Decoder decoder = Base64.getDecoder();
@@ -25,6 +35,12 @@ public record JWT(String header, String payload, String signature) {
         }
     }
 
+    /**
+     * Returns a nicely formatted string representation of the JWT.
+     *
+     * @return A string representation of the JWT with decoded timestamps.
+     * @throws RuntimeException If the token is invalid or cannot be decoded.
+     */
     public String toNiceString() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonObject h = gson.fromJson(this.header, JsonObject.class);
