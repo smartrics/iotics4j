@@ -21,16 +21,16 @@ public interface OsLibraryPathResolver {
         } else {
             throw new UnsupportedOperationException("Unsupported operating system: " + osName);
         }
-        if(path == null) {
+        if (path == null) {
             throw new IllegalArgumentException("null path");
         }
         File p = Path.of(path).toFile();
-        if(!p.exists() || !p.canRead()) {
+        if (!p.exists() || !p.canRead()) {
             throw new IllegalArgumentException("invalid path or not accessible:  " + p.getAbsolutePath());
         }
 
         File libFile = Paths.get(path, file).toFile();
-        if(libFile.exists() && libFile.canRead()) {
+        if (libFile.exists() && libFile.canRead()) {
             return libFile.toPath().toString();
         }
         throw new IllegalArgumentException("Unable to find a library file at '" + path + "' for os '" + osName + "'");

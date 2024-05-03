@@ -11,8 +11,8 @@ import java.util.Objects;
  * creation of invalid identity instances.
  *
  * @param keyName the key name associated with the identity, must not be null
- * @param name the name of the identity, must not be null
- * @param did the decentralized identifier (DID), must not be null
+ * @param name    the name of the identity, must not be null
+ * @param did     the decentralized identifier (DID), must not be null
  */
 public record Identity(String keyName, String name, String did) {
 

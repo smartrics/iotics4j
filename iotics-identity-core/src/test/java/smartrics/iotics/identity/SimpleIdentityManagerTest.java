@@ -15,20 +15,17 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class SimpleIdentityManagerTest {
 
-    @Mock
-    private SimpleIdentityImpl mockIdSdk;
-
-    @InjectMocks
-    private SimpleIdentityManager manager;
-
     private final String userKeyName = "userKey";
     private final String userKeyID = "userKeyID";
     private final String agentKeyName = "agentKey";
     private final String agentKeyID = "agentKeyID";
     private final String authDelegationID = "authDelegationID";
-
     private final Identity userIdentity = new Identity("userKey", "user", "did:iotics:user");
     private final Identity agentIdentity = new Identity("agentKey", "agent", "did:iotics:agent");
+    @Mock
+    private SimpleIdentityImpl mockIdSdk;
+    @InjectMocks
+    private SimpleIdentityManager manager;
 
     @BeforeEach
     void setUp() {
