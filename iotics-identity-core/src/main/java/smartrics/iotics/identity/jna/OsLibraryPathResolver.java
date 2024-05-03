@@ -4,6 +4,9 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Utility method to resolve library path. It's mildly OS independent.
+ */
 public interface OsLibraryPathResolver {
     default String resolveLibraryPath(String path) {
         String osName = System.getProperty("os.name").toLowerCase();

@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added annotations support">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentity.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/SimpleIdentityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/go/StringResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/go/StringResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/OsLibraryPathResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/OsLibraryPathResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/SdkApiInitialiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/src/main/java/smartrics/iotics/identity/jna/SdkApiInitialiser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +187,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3045977",
-    "settings.editor.selected.configurable": "Errors"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
