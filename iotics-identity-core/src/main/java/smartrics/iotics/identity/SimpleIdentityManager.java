@@ -48,6 +48,15 @@ public class SimpleIdentityManager implements IdentityManager {
         return userIdentity;
     }
 
+    /**
+     * access to the underlying API for advanced use cases
+     *
+     * @return the {@link SimpleIdentity} API
+     */
+    public SimpleIdentity simpleIdentity() {
+        return this.idSdk;
+    }
+
     public static final class Builder {
         private String userKeyName;
         private String agentKeyName;

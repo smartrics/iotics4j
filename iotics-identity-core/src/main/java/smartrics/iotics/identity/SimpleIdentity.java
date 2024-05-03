@@ -2,6 +2,9 @@ package smartrics.iotics.identity;
 
 import java.time.Duration;
 
+/**
+ * Low level Java API mapping to the native IOTICS Identity library
+ */
 public interface SimpleIdentity {
     Identity CreateAgentIdentity(String keyName, String name);
 
