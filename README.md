@@ -20,3 +20,8 @@ If symlink isn't restored, cd into `./iotics-agent-core` and run:
 - On Linux `ln -s src/main/proto/iotics iotics-api/proto/iotics`
 
 * `mvn package`
+
+## Release notes
+
+* 1.1: fix on hostAllowList values
+* 1.0: initial release
