@@ -4,7 +4,7 @@
     <parent>
         <groupId>smartrics.iotics</groupId>
         <artifactId>iotics4j</artifactId>
-        <version>1.1</version>
+        <version>1.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>iotics-agent-twins</artifactId>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>smartrics.iotics</groupId>
             <artifactId>iotics-agent-core</artifactId>
-            <version>1.1</version>
+            <version>1.2-SNAPSHOT</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/dev.failsafe/failsafe -->
         <dependency>
