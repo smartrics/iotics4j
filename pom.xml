@@ -47,6 +47,7 @@
         <developerConnection>scm:git:ssh://github.com:smartrics/iotics4j.git</developerConnection>
         <url>https://github.com/smartrics/iotics4j/tree/main</url>
     </scm>
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>

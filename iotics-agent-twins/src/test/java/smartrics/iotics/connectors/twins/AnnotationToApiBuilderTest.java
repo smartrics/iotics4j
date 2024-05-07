@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import smartrics.iotics.connectors.twins.annotations.*;
+import smartrics.iotics.host.UriConstants;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -322,6 +323,18 @@ class AnnotationToApiBuilderTest {
             private String two = "did:321";
 
         }));
+    }
+
+    @Test
+    void buildsVisibilityProperty() {
+        List<AnnotationData> data = GenericInvoker.collectAnnotatedMemberValues(new TestInterface() {
+
+            @UriProperty(iri = UriConstants.IOTICSProperties.HostAllowListName)
+            private String visibility = UriConstants.IOTICSProperties.HostAllowListValues.ALL.toString();
+
+            }, UriProperty.class);
+
+        assertThat(data.getFirst().annotatedElementValue().toString(), is(equalTo( UriConstants.IOTICSProperties.HostAllowListValues.ALL.toString())));
     }
 
     @Test
