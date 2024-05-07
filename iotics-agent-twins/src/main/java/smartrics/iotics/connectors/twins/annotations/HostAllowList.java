@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.FIELD})
 public @interface HostAllowList {
-    // http://data.iotics.com/public#allHosts
-    // http://data.iotics.com/public#noHost
+    // http://data.iotics.com/public#all
+    // http://data.iotics.com/public#none
     String iri() default ("http://data.iotics.com/public#hostAllowList");
 }

@@ -15,11 +15,11 @@ public interface UriConstants {
             /**
              * URI that represents a value indicating all hosts are allowed; used in conjunction with
              */
-            ALL(prefix + "allHosts"),
+            ALL(prefix + "all"),
             /**
              * URI that represents a value indicating no hosts are allowed; used in conjunction with
              */
-            NONE(prefix + "noHosts");
+            NONE(prefix + "none");
 
             private final String value;
 

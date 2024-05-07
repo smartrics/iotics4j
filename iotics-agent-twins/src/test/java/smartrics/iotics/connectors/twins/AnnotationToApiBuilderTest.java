@@ -78,6 +78,19 @@ class AnnotationToApiBuilderTest {
         assertThat(payload.getInputsList().stream().filter(u -> u.getId().equals("myInput")).mapToLong(u -> u.getPropertiesList().size()).sum(), is(equalTo(2L)));
     }
 
+    @Test
+    void buildsUpsertRequestPayloadWithUriProperty() {
+        UpsertTwinRequest.Payload payload = annBuilder.buildUpsertTwinRequestPayload(TwinID.newBuilder().setId("did:iotics:123").build(), new TestInterface() {
+
+            @UriProperty(iri = UriConstants.IOTICSProperties.HostAllowListName)
+            private final String visibility = UriConstants.IOTICSProperties.HostAllowListValues.ALL.toString();
+
+        });
+
+        assertThat(payload.getPropertiesList().getFirst().getUriValue().getValue(),
+                is(equalTo(UriConstants.IOTICSProperties.HostAllowListValues.ALL.toString())));
+
+    }
 
     @Test
     void buildStringLiteralProperty() {
