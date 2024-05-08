@@ -1,6 +1,6 @@
 package smartrics.iotics.identity.resolver.model;
 
-public record DelegateAuthentication(
+public record Delegation(
         String id,
         String controller,
         String proof,

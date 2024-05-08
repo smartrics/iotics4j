@@ -10,6 +10,7 @@ public record Document(
         long updateTime,
         String proof,
         List<PublicKey> publicKey,
-        List<DelegateAuthentication> delegateAuthentication,
+        List<Delegation> delegateAuthentication,
+        List<Delegation> delegateControl,
         Map<String, String> metadata
 ) {}
