@@ -1,18 +1,19 @@
 package smartrics.iotics.host;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import com.iotics.api.*;
+import com.iotics.api.Headers;
+import com.iotics.api.ListAllTwinsRequest;
+import com.iotics.api.ListAllTwinsResponse;
+import com.iotics.api.TwinAPIGrpc;
 import io.grpc.ManagedChannel;
+import io.grpc.inprocess.InProcessChannelBuilder;
+import io.grpc.inprocess.InProcessServerBuilder;
 import io.grpc.stub.StreamObserver;
+import io.grpc.testing.GrpcCleanupRule;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import smartrics.iotics.host.grpc.HostConnection;
-
-import io.grpc.inprocess.InProcessChannelBuilder;
-import io.grpc.inprocess.InProcessServerBuilder;
-import io.grpc.testing.GrpcCleanupRule;
 import smartrics.iotics.host.wrappers.TwinAPIFuture;
 
 import java.time.Duration;
@@ -25,14 +26,6 @@ public class IoticsApiImplTest {
 
     @Rule
     public final GrpcCleanupRule grpcCleanup = new GrpcCleanupRule();
-
-    private HostConnection hostConnection;
-
-    private IoticsApiImpl api;
-
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
-
     private final TwinAPIGrpc.TwinAPIImplBase twinApi = mock(TwinAPIGrpc.TwinAPIImplBase.class, delegatesTo(new TwinAPIGrpc.TwinAPIImplBase() {
         @Override
         public void listAllTwins(ListAllTwinsRequest request, StreamObserver<ListAllTwinsResponse> responseObserver) {
@@ -41,6 +34,8 @@ public class IoticsApiImplTest {
             responseObserver.onCompleted();
         }
     }));
+    private HostConnection hostConnection;
+    private IoticsApiImpl api;
 
     @Before
     public void setup() throws Exception {

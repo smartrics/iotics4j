@@ -1,11 +1,9 @@
 package smartrics.iotics.connectors.twins.annotations;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Map;
 
-public record AnnotationData(@NotNull Object annotation, @NotNull Map<String, Object> annotationKvp,
-                             @NotNull Object annotatedElementValue, @NotNull String methodOrFieldName) {
+public record AnnotationData(Object annotation, Map<String, Object> annotationKvp,
+                             Object annotatedElementValue, String methodOrFieldName) {
     public AnnotationData(Object annotation, Map<String, Object> annotationKvp, Object annotatedElementValue, String methodOrFieldName) {
         this.annotation = annotation;
         if (this.annotation == null) {

@@ -8,7 +8,6 @@ import com.iotics.api.DescribeTwinRequest;
 import com.iotics.api.DescribeTwinResponse;
 import com.iotics.api.TwinID;
 import io.grpc.stub.StreamObserver;
-import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.host.Builders;
 
 import java.time.Duration;
@@ -33,7 +32,7 @@ public interface Describer extends Identifiable, ApiUser {
      * @param pollingFrequency The frequency with which twin details are retrieved.
      * @param result           The observer to handle responses or failures of the retrieval tasks.
      */
-    default void describe(TwinID twinID, @NotNull ScheduledExecutorService scheduler, @NotNull Duration initialDelay, @NotNull Duration pollingFrequency, StreamObserver<DescribeTwinResponse> result) {
+    default void describe(TwinID twinID, ScheduledExecutorService scheduler, Duration initialDelay, Duration pollingFrequency, StreamObserver<DescribeTwinResponse> result) {
         scheduler.scheduleAtFixedRate(() -> {
             ListenableFuture<DescribeTwinResponse> f = describe(twinID);
             Futures.addCallback(f, new FutureCallback<>() {
@@ -43,7 +42,7 @@ public interface Describer extends Identifiable, ApiUser {
                 }
 
                 @Override
-                public void onFailure(@NotNull Throwable throwable) {
+                public void onFailure(Throwable throwable) {
                     result.onError(throwable);
                 }
             }, MoreExecutors.directExecutor());

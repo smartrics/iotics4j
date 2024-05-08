@@ -1,7 +1,6 @@
 package smartrics.iotics.connectors.twins.annotations;
 
 import com.google.common.collect.Maps;
-import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -51,7 +50,6 @@ public class GenericInvoker {
         return collectedValues;
     }
 
-    @NotNull
     private static <A extends Annotation> Map<String, Object> annotationToDataMap(A annotation) {
         Map<String, Object> keys = Maps.newHashMap();
         Arrays.stream(annotation.annotationType().getDeclaredMethods()).forEach(annMethod -> {

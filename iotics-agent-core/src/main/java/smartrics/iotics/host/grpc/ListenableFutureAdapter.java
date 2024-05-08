@@ -4,7 +4,6 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
@@ -34,7 +33,7 @@ public class ListenableFutureAdapter<T> {
             }
 
             @Override
-            public void onFailure(@NotNull Throwable t) {
+            public void onFailure(Throwable t) {
                 completableFuture.completeExceptionally(t);
             }
         }, executor);

@@ -4,7 +4,6 @@ import com.google.common.util.concurrent.*;
 import com.iotics.api.*;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
-import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.host.Builders;
 
 import java.util.concurrent.Executor;
@@ -32,7 +31,7 @@ public interface Maker extends Identifiable, Describer {
             }
 
             @Override
-            public void onFailure(@NotNull Throwable thrown) {
+            public void onFailure(Throwable thrown) {
                 if ((thrown instanceof StatusRuntimeException sre) && sre.getStatus().getCode() == Status.Code.NOT_FOUND) {
                     Futures.addCallback(maker.upsert(), makeCallback(future), executor);
                 } else {
@@ -48,7 +47,6 @@ public interface Maker extends Identifiable, Describer {
      * @param future the future to be completed with the twin ID
      * @return a callback that handles the result of the upsert operation
      */
-    @NotNull
     private static FutureCallback<UpsertTwinResponse> makeCallback(SettableFuture<TwinID> future) {
         return new FutureCallback<>() {
             @Override
@@ -57,7 +55,7 @@ public interface Maker extends Identifiable, Describer {
             }
 
             @Override
-            public void onFailure(@NotNull Throwable throwable) {
+            public void onFailure(Throwable throwable) {
                 future.setException(throwable);
             }
         };

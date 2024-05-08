@@ -9,7 +9,6 @@ import io.grpc.Context;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
-import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.host.Builders;
 import smartrics.iotics.host.wrappers.InterestAPI;
 import smartrics.iotics.identity.Identity;
@@ -115,7 +114,6 @@ public interface Follower extends Identifiable, ApiUser {
      * @param feedId the identifier of the feed
      * @return a new fetch interest request configured with the given feed ID
      */
-    @NotNull
     private FetchInterestRequest newRequest(FeedID feedId) {
         try {
             Identity agentIdentity = getAgentIdentity();

@@ -4,7 +4,6 @@ import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.protobuf.ByteString;
 import com.iotics.api.*;
-import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.connectors.twins.annotations.*;
 
 import java.lang.annotation.Annotation;
@@ -13,7 +12,6 @@ import java.util.stream.Stream;
 
 class AnnotationToApiBuilder {
 
-    @NotNull
     private static <A extends Annotation> Optional<String> getValidIdentifierValue(Object instance, Class<A> annotationClass) {
         List<String> v = GenericInvoker.collectAnnotatedMemberValues(instance, annotationClass).stream().map(annotationData -> annotationData.annotatedElementValue().toString()).toList();
         if (v.size() > 1) {
@@ -25,7 +23,7 @@ class AnnotationToApiBuilder {
         return Optional.of(v.getFirst());
     }
 
-    List<FeedValue> buildShareFeedDataRequestJSONPayload(@NotNull Object instance) {
+    List<FeedValue> buildShareFeedDataRequestJSONPayload(Object instance) {
         List<AnnotationData> feeds = GenericInvoker.collectAnnotatedMemberValues(instance, Feed.class);
         List<FeedValue> results = Lists.newArrayListWithCapacity(feeds.size());
         feeds.forEach(feedAnnotationData -> {
@@ -47,7 +45,7 @@ class AnnotationToApiBuilder {
         return results;
     }
 
-    UpsertTwinRequest.Payload buildUpsertTwinRequestPayload(TwinID twinID, @NotNull Object instance) {
+    UpsertTwinRequest.Payload buildUpsertTwinRequestPayload(TwinID twinID, Object instance) {
         UpsertTwinRequest.Payload.Builder builder = UpsertTwinRequest.Payload.newBuilder();
         builder.setTwinId(Optional.ofNullable(twinID).orElseGet(() -> buildId(instance)));
         GeoLocation l = buildLocation(instance);

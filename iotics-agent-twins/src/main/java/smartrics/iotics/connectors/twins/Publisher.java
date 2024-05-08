@@ -7,7 +7,6 @@ import com.iotics.api.FeedID;
 import com.iotics.api.ShareFeedDataRequest;
 import com.iotics.api.ShareFeedDataResponse;
 import io.grpc.stub.StreamObserver;
-import org.jetbrains.annotations.NotNull;
 import smartrics.iotics.host.Builders;
 
 import java.nio.charset.StandardCharsets;
@@ -60,7 +59,6 @@ public interface Publisher extends Identifiable, ApiUser {
      * @param payload The data payload to be shared as a string.
      * @return a {@link ShareFeedDataRequest} configured with the specified feed ID and payload.
      */
-    @NotNull
     default ShareFeedDataRequest newRequest(FeedID feedID, String payload) {
         return ShareFeedDataRequest.newBuilder()
                 .setHeaders(Builders.newHeadersBuilder(getAgentIdentity()).build())
