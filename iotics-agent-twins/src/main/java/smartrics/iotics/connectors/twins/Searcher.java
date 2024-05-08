@@ -1,10 +1,16 @@
 package smartrics.iotics.connectors.twins;
 
+import com.google.protobuf.Timestamp;
 import com.iotics.api.SearchRequest;
 import com.iotics.api.SearchResponse;
 import com.iotics.api.SparqlQueryRequest;
+import io.grpc.Status;
+import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
 import smartrics.iotics.host.Builders;
+
+import java.time.Duration;
+import java.time.Instant;
 
 
 /**
@@ -39,7 +45,7 @@ public interface Searcher extends Identifiable, ApiUser {
      * @param searchRequestPayload      The payload specifying the search criteria.
      * @param twinDetailsStreamObserver The observer to receive and handle the twin details as they are found.
      */
-    default void search(SearchRequest.Payload searchRequestPayload, StreamObserver<SearchResponse.TwinDetails> twinDetailsStreamObserver) {
+    default void search(SearchRequest.Payload searchRequestPayload, Duration searchTimeout, StreamObserver<SearchResponse.TwinDetails> twinDetailsStreamObserver) {
         StreamObserver<SearchResponse> obs = new StreamObserver<>() {
             @Override
             public void onNext(SearchResponse searchResponse) {
@@ -54,6 +60,12 @@ public interface Searcher extends Identifiable, ApiUser {
 
             @Override
             public void onError(Throwable throwable) {
+                if(throwable instanceof StatusRuntimeException e) {
+                    if(Status.Code.DEADLINE_EXCEEDED.equals(e.getStatus().getCode())) {
+                        twinDetailsStreamObserver.onCompleted();
+                        return;
+                    }
+                }
                 twinDetailsStreamObserver.onError(throwable);
             }
 
@@ -63,7 +75,11 @@ public interface Searcher extends Identifiable, ApiUser {
             }
         };
         SearchRequest request = SearchRequest.newBuilder()
-                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity()).build())
+                .setHeaders(Builders.newHeadersBuilder(getAgentIdentity())
+                        .setRequestTimeout(Timestamp.newBuilder()
+                                .setSeconds(Instant.now().getEpochSecond() + searchTimeout.getSeconds())
+                                .build())
+                        .build())
                 .setPayload(searchRequestPayload)
                 .build();
         ioticsApi().searchAPI().synchronousSearch(request, obs);
