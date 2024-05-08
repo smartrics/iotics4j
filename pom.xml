@@ -17,6 +17,7 @@
         <module>iotics-identity-lib</module>
         <module>iotics-agent-core</module>
         <module>iotics-agent-twins</module>
+        <module>examples</module>
     </modules>
 
     <properties>
