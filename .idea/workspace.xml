@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="fixed search issue with timeout">
-      <change afterPath="$PROJECT_DIR$/examples/src/integrationTest/java/smartrics/iotics/iotics4j/agentcore/SearchTest.java" afterDir="false" />
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added integration test for search API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnectionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnectionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,38 +251,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchTest.searchExpiresInTimeoutProvided">
-    <configuration name="IdentityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="examples" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.iotics4j.identitycore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.iotics4j.identitycore" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.iotics4j.identitycore.IdentityTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IdentityTest.delegation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="examples" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.iotics4j.identitycore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.iotics4j.identitycore" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.iotics4j.identitycore.IdentityTest" />
-      <option name="METHOD_NAME" value="delegation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.java in iotics-agent-core">
     <configuration name="ResolverDocumentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="iotics-identity-lib" />
       <extension name="coverage">
@@ -345,20 +313,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in iotics-agent-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/iotics-agent-core/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Python tests in test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-core" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/iotics-agent-core/src/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/iotics-agent-core/src/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JUnit.SearcherTest.testSearch" />
-      <item itemvalue="JUnit.IdentityTest" />
-      <item itemvalue="JUnit.IdentityTest.delegation" />
+      <item itemvalue="JUnit.java in iotics-agent-core" />
       <item itemvalue="JUnit.ResolverDocumentTest" />
       <item itemvalue="JUnit.SearchTest.searchExpiresInTimeoutProvided" />
+      <item itemvalue="Python tests.Python tests in test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in iotics-agent-core" />
+        <item itemvalue="Python tests.Python tests in test" />
         <item itemvalue="JUnit.SearchTest.searchExpiresInTimeoutProvided" />
         <item itemvalue="JUnit.SearcherTest.testSearch" />
         <item itemvalue="JUnit.ResolverDocumentTest" />
-        <item itemvalue="JUnit.IdentityTest.delegation" />
-        <item itemvalue="JUnit.IdentityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -643,7 +634,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715185976587</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added ability to inject logs printing">
+      <option name="closed" value="true" />
+      <created>1715187525039</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1715187525039</updated>
+    </task>
+    <task id="LOCAL-00036" summary="added integration test for search API">
+      <option name="closed" value="true" />
+      <created>1715187536186</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1715187536186</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -662,8 +669,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added higher level tools in identity lib" />
-    <MESSAGE value="moved code from iotics-agent-java" />
     <MESSAGE value="added missing test" />
     <MESSAGE value="cleaned up code" />
     <MESSAGE value="renamed class" />
@@ -687,7 +692,9 @@
     <MESSAGE value="added control deleg section" />
     <MESSAGE value="added basic integr test for identity" />
     <MESSAGE value="fixed search issue with timeout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed search issue with timeout" />
+    <MESSAGE value="added ability to inject logs printing" />
+    <MESSAGE value="added integration test for search API" />
+    <option name="LAST_COMMIT_MESSAGE" value="added integration test for search API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
