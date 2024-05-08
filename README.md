@@ -23,5 +23,6 @@ If symlink isn't restored, cd into `./iotics-agent-core` and run:
 
 ## Release notes
 
+* 1.2: fix Searcher API. Correctly use the search timeout
 * 1.1: fix on hostAllowList values
 * 1.0: initial release

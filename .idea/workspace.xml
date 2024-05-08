@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added integration test for search API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
