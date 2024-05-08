@@ -1,8 +1,7 @@
 package smartrics.iotics.host.grpc;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import io.grpc.*;
 import smartrics.iotics.identity.IdentityManager;
 import smartrics.iotics.identity.SimpleConfig;
 import smartrics.iotics.identity.SimpleIdentityManager;
@@ -21,7 +20,9 @@ public class HostConnectionImpl implements HostConnection {
         this.scheduler = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryBuilder().setNameFormat("token-refresh-%d").build());
         ManagedChannelBuilder<?> channelBuilder = newHostManagedChannelBuilderFactory(sim, scheduler, grpcEndpoint, tokenValidityDuration);
         ExecutorService executor = Executors.newCachedThreadPool(new ThreadFactoryBuilder().setNameFormat("iot-grpc-%d").build());
-        channel = channelBuilder.executor(executor).keepAliveWithoutCalls(true).build();
+        channel = channelBuilder
+                .executor(executor)
+                .keepAliveWithoutCalls(true).build();
     }
 
     public HostConnectionImpl(String grpcEndpoint, SimpleConfig userConf, SimpleConfig agentConf, Duration tokenValidityDuration) {
@@ -34,7 +35,12 @@ public class HostConnectionImpl implements HostConnection {
     }
 
     public static ManagedChannelBuilder<?> newHostManagedChannelBuilderFactory(IdentityManager sim, ScheduledExecutorService scheduler, String grpcEndpoint, Duration tokenValidityDuration) {
-        return new HostManagedChannelBuilderFactory().withIdentityManager(sim).withScheduler(scheduler).withSGrpcEndpoint(grpcEndpoint).withTokenTokenDuration(tokenValidityDuration).makeManagedChannelBuilder();
+        return new HostManagedChannelBuilderFactory()
+                .withIdentityManager(sim)
+                .withScheduler(scheduler)
+                .withSGrpcEndpoint(grpcEndpoint)
+                .withTokenTokenDuration(tokenValidityDuration)
+                .makeManagedChannelBuilder();
     }
 
     @Override

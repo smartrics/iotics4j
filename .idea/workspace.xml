@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added gson parser classes">
-      <change afterPath="$PROJECT_DIR$/examples/src/integrationTest/java/smartrics/iotics/iotics4j/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/src/integrationTest/java/smartrics/iotics/iotics4j/Factory.java" afterDir="false" />
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="fixed search issue with timeout">
       <change afterPath="$PROJECT_DIR$/examples/src/integrationTest/java/smartrics/iotics/iotics4j/agentcore/SearchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/src/integrationTest/java/smartrics/iotics/iotics4j/identitycore/IdentityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/model/DelegateAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/model/Delegation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/model/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/src/main/java/smartrics/iotics/identity/resolver/model/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnectionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostConnectionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +158,9 @@
     "JUnit.PublisherTest.executor": "Run",
     "JUnit.PublisherTest.testShareWithFeedIDAndPayload.executor": "Run",
     "JUnit.ResolverDocumentTest.executor": "Run",
+    "JUnit.SearchTest.searchExpiresInTimeoutProvided.executor": "Run",
     "JUnit.SearcherTest.testQuery.executor": "Run",
+    "JUnit.SearcherTest.testSearch.executor": "Debug",
     "JUnit.SimpleIdentityImplTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.executor": "Run",
     "JUnit.SimpleIdentityManagerTest.testNewAuthenticationToken.executor": "Debug",
@@ -253,39 +252,7 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IdentityTest">
-    <configuration name="AnnotationToApiBuilderTest.buildsUpsertRequestPayloadWithUriProperty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-twins" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="METHOD_NAME" value="buildsUpsertRequestPayloadWithUriProperty" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnnotationToApiBuilderTest.buildsVisibilityProperty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="iotics-agent-twins" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
-      <option name="METHOD_NAME" value="buildsVisibilityProperty" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SearchTest.searchExpiresInTimeoutProvided">
     <configuration name="IdentityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="examples" />
       <extension name="coverage">
@@ -332,20 +299,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchTest.searchExpiresInTimeoutProvided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.iotics4j.agentcore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.iotics4j.agentcore" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.iotics4j.agentcore.SearchTest" />
+      <option name="METHOD_NAME" value="searchExpiresInTimeoutProvided" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="GRPC_TRACE" value="all" />
+        <env name="GRPC_VERBOSITY" value="DEBUG" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearcherTest.testSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.SearcherTest" />
+      <option name="METHOD_NAME" value="testSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.SearcherTest.testSearch" />
       <item itemvalue="JUnit.IdentityTest" />
       <item itemvalue="JUnit.IdentityTest.delegation" />
       <item itemvalue="JUnit.ResolverDocumentTest" />
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsUpsertRequestPayloadWithUriProperty" />
-      <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsVisibilityProperty" />
+      <item itemvalue="JUnit.SearchTest.searchExpiresInTimeoutProvided" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IdentityTest" />
-        <item itemvalue="JUnit.IdentityTest.delegation" />
+        <item itemvalue="JUnit.SearchTest.searchExpiresInTimeoutProvided" />
+        <item itemvalue="JUnit.SearcherTest.testSearch" />
         <item itemvalue="JUnit.ResolverDocumentTest" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsUpsertRequestPayloadWithUriProperty" />
-        <item itemvalue="JUnit.AnnotationToApiBuilderTest.buildsVisibilityProperty" />
+        <item itemvalue="JUnit.IdentityTest.delegation" />
+        <item itemvalue="JUnit.IdentityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -606,7 +619,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715171176971</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added control deleg section">
+      <option name="closed" value="true" />
+      <created>1715172755106</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715172755106</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added basic integr test for identity">
+      <option name="closed" value="true" />
+      <created>1715172773715</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1715172773715</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed search issue with timeout">
+      <option name="closed" value="true" />
+      <created>1715185976587</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1715185976587</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -625,8 +662,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added code to load identity lib" />
-    <MESSAGE value="added code to wrap the library interface with simpler methods to use" />
     <MESSAGE value="added higher level tools in identity lib" />
     <MESSAGE value="moved code from iotics-agent-java" />
     <MESSAGE value="added missing test" />
@@ -649,7 +684,10 @@
     <MESSAGE value="removed jb annotations" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="added gson parser classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gson parser classes" />
+    <MESSAGE value="added control deleg section" />
+    <MESSAGE value="added basic integr test for identity" />
+    <MESSAGE value="fixed search issue with timeout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed search issue with timeout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -686,6 +724,11 @@
             <option name="lambda-ordinal" value="0" />
           </properties>
           <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
