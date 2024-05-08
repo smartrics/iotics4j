@@ -2,7 +2,6 @@ package smartrics.iotics.connectors.twins;
 
 import com.google.gson.Gson;
 import com.iotics.api.*;
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -150,7 +149,7 @@ class AnnotationToApiBuilderTest {
         assertThat(prop.getLiteralValue().getDataType(), is(equalTo("boolean")));
     }
 
-    private static @NotNull TestInterface newTestInterfaceWithStatic() {
+    private static TestInterface newTestInterfaceWithStatic() {
         return new TestInterface() {
             @StringLiteralProperty(iri = "http://blurb.com/foo")
             public static String something = "foo";
