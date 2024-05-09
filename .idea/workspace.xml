@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added integration test for search API">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-identity-lib/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added integration test for search API" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
