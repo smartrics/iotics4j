@@ -4,7 +4,7 @@
 
     <groupId>smartrics.iotics</groupId>
     <artifactId>iotics4j</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
 
     <packaging>pom</packaging>
 

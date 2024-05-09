@@ -6,7 +6,7 @@
     <parent>
         <groupId>smartrics.iotics</groupId>
         <artifactId>iotics4j</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.2</version>
     </parent>
 
     <artifactId>examples</artifactId>
@@ -25,22 +25,22 @@
         <dependency>
             <groupId>smartrics.iotics</groupId>
             <artifactId>iotics-agent-twins</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>smartrics.iotics</groupId>
             <artifactId>iotics-agent-core</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>smartrics.iotics</groupId>
             <artifactId>iotics-identity-lib</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>smartrics.iotics</groupId>
             <artifactId>iotics-identity-core</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 
