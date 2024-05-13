@@ -1,6 +1,7 @@
 package smartrics.iotics.connectors.twins.annotations;
 
 public enum XsdDatatype {
+    string,
     dateTime,
     time,
     date,
