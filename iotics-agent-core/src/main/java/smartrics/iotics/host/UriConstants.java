@@ -1,5 +1,8 @@
 package smartrics.iotics.host;
 
+import java.util.Arrays;
+import java.util.Optional;
+
 /**
  * Contains constant URI values used across the application, particularly for IOTICS twins creatoion.
  */
@@ -23,13 +26,17 @@ public interface UriConstants {
 
             private final String value;
 
+            HostAllowListValues(String v) {
+                this.value = v;
+            }
+
+            public static Optional<HostAllowListValues> fromString(String value) {
+                return Arrays.stream(HostAllowListValues.values()).filter(p -> p.value.equals(value)).findFirst();
+            }
+
             @Override
             public String toString() {
                 return value;
-            }
-
-            HostAllowListValues(String v) {
-                this.value = v;
             }
         }
     }
@@ -57,6 +64,7 @@ public interface UriConstants {
 
 
     }
+
     interface RDFProperty {
         /**
          * Base URI for RDF schema vocabulary.
