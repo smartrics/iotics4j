@@ -24,8 +24,7 @@ public interface MappablePublisher extends Publisher, Mappable {
      */
     default CompletableFuture<Void> share() {
         List<ShareFeedDataRequest> list = getMapper().getShareFeedDataRequest();
-        Function<ShareFeedDataRequest, ListenableFuture<?>> function = request ->
-                ioticsApi().feedAPIFuture().shareFeedData(request);
+        Function<ShareFeedDataRequest, ListenableFuture<?>> function = this::share;
         return map(list, function);
     }
 
