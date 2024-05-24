@@ -120,10 +120,21 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <id>default</id>
                         <goals>
                             <goal>compile</goal>
                             <goal>compile-custom</goal>
                         </goals>
+                    </execution>
+                    <execution>
+                        <id>iotics</id>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                        <configuration>
+                            <protoSourceRoot>${basedir}/iotics-api/proto</protoSourceRoot>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
