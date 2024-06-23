@@ -236,14 +236,14 @@ class AnnotationToApiBuilderTest {
     void buildFeedValueMeta() {
         List<Value> values = annBuilder.buildValuesMeta(new TestInterface() {
 
-            @PayloadValue(label = "fooLabel", comment = "fooComment", dataType = "fooDataType", unit = "fooUnit")
+            @PayloadValue(label = "fooLabel", comment = "fooComment", dataType = XsdDatatype.string, unit = "fooUnit")
             private String foo = "fooValue";
 
         });
         Value v = values.getFirst();
         assertThat(v.getLabel(), is(equalTo("fooLabel")));
         assertThat(v.getComment(), is(equalTo("fooComment")));
-        assertThat(v.getDataType(), is(equalTo("fooDataType")));
+        assertThat(v.getDataType(), is(equalTo(XsdDatatype.string.toString())));
         assertThat(v.getUnit(), is(equalTo("fooUnit")));
     }
 

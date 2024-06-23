@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="added utility method to parse string">
+    <list default="true" id="cd405ef1-7288-4320-80ea-5c74b0b96019" name="Changes" comment="updated release notes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/annotations/PayloadValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/iotics-agent-twins/src/test/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,33 +254,18 @@
       <recent name="smartrics.iotics.identity.resolver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.XsdDatatypeTest">
-    <configuration name="SearchTest.searchExpiresInTimeoutProvided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="examples" />
+  <component name="RunManager" selected="JUnit.AnnotationToApiBuilderTest">
+    <configuration name="AnnotationToApiBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iotics-agent-twins" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="smartrics.iotics.iotics4j.agentcore.*" />
+          <option name="PATTERN" value="smartrics.iotics.connectors.twins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </extension>
-      <option name="PACKAGE_NAME" value="smartrics.iotics.iotics4j.agentcore" />
-      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.iotics4j.agentcore.SearchTest" />
-      <option name="METHOD_NAME" value="searchExpiresInTimeoutProvided" />
-      <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="GRPC_TRACE" value="all" />
-        <env name="GRPC_VERBOSITY" value="DEBUG" />
-      </envs>
+      <option name="PACKAGE_NAME" value="smartrics.iotics.connectors.twins" />
+      <option name="MAIN_CLASS_NAME" value="smartrics.iotics.connectors.twins.AnnotationToApiBuilderTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -337,19 +325,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
       <item itemvalue="JUnit.XsdDatatypeTest" />
       <item itemvalue="JUnit.XsdDatatypeTest.otherTypes" />
       <item itemvalue="JUnit.java in iotics-agent-core" />
-      <item itemvalue="JUnit.SearchTest.searchExpiresInTimeoutProvided" />
       <item itemvalue="Python tests.Python tests in test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnnotationToApiBuilderTest" />
         <item itemvalue="JUnit.XsdDatatypeTest" />
         <item itemvalue="JUnit.XsdDatatypeTest.otherTypes" />
         <item itemvalue="JUnit.java in iotics-agent-core" />
         <item itemvalue="Python tests.Python tests in test" />
-        <item itemvalue="JUnit.SearchTest.searchExpiresInTimeoutProvided" />
       </list>
     </recent_temporary>
   </component>
@@ -747,14 +735,6 @@
           <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/Follower.java</url>
           <line>70</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/iotics-agent-twins/src/main/java/smartrics/iotics/connectors/twins/AnnotationToApiBuilder.java</url>
-          <line>67</line>
-          <properties>
-            <option name="lambda-ordinal" value="0" />
-          </properties>
-          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/iotics-agent-core/src/main/java/smartrics/iotics/host/grpc/HostManagedChannelBuilderFactory.java</url>

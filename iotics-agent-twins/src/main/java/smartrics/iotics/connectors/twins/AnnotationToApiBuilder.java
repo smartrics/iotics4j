@@ -95,7 +95,8 @@ class AnnotationToApiBuilder {
         List<AnnotationData> ad = GenericInvoker.collectAnnotatedMemberValues(instance, PayloadValue.class);
         ad.forEach(annotationData -> {
             Value.Builder vb = Value.newBuilder();
-            // don't need the others
+            // don't need the others, here we need only to build the payload to share
+            // we need the other meta when creating the object
             String label = annotationData.annotationKvp().get("label").toString();
             if(!label.isEmpty()) {
                 vb.setLabel(label);

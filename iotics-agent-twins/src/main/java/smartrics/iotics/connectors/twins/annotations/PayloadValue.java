@@ -13,7 +13,7 @@ public @interface PayloadValue {
 
     String unit() default "";
 
-    String dataType() default "";
+    XsdDatatype dataType() default XsdDatatype.string;
 
     String comment() default "";
 }
