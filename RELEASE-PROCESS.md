@@ -49,5 +49,6 @@ Assuming new version is 1.4-SNAPSHOT
 mvn versions:set
 git add .
 git commit -m"upped to version 1.4-SNAPSHOT"
+mvn versions:commit
 ```
 
