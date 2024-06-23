@@ -23,6 +23,8 @@ If symlink isn't restored, cd into `./iotics-agent-core` and run:
 
 ## Release notes
 
+* 1.4:
+  * 
 * 1.3: 
   * fix Publisher API and minor tweaks
   * setting the PayloadValue#dataType type to XsdDatatype
